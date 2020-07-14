@@ -1,0 +1,151 @@
+<div class="piano-module">
+    <div id="key_buttons" class="btn-group">
+        <div class="row">
+            <label class="c_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'C_major'" uncheckable>C Major</label>
+            <label class="c_sharp_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'C_sharp_major'" uncheckable>C# Major</label>
+            <label class="d_flat_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'D_flat_major'" uncheckable>Db Major</label>
+            <label class="d_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'D_major'" uncheckable>D Major</label>
+            <label class="e_flat_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'E_flat_major'" uncheckable>Eb Major</label>
+            <label class="e_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'E_major'" uncheckable>E Major</label>
+            <label class="f_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'F_major'" uncheckable>F Major</label>
+            <label class="f_sharp_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'F_sharp_major'" uncheckable>F# Major</label>
+<!--            <label class="G_flat_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'G_flat_major'" uncheckable>Gb Major</label>-->
+            <label class="g_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'G_major'" uncheckable>G Major</label>
+<!--            <label class="G_sharp_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'G_sharp_major'" uncheckable>G# Major</label>-->
+            <label class="a_flat_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'A_flat_major'" uncheckable>Ab Major</label>
+            <label class="a_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'A_major'" uncheckable>A Major</label>
+<!--            <label class="A_sharp_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'A_sharp_major'" uncheckable>A# Major</label>-->
+            <label class="b_flat_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'B_flat_major'" uncheckable>Bb Major</label>
+            <label class="b_major btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'B_major'" uncheckable>B Major</label>
+            <div class="w-100"></div>
+            <label class="c_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'C_minor'" uncheckable>C Minor</label>
+            <label class="c_sharp_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'C_sharp_minor'" uncheckable>C# Minor</label>
+            <label class="d_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'D_minor'" uncheckable>D Minor</label>
+            <label class="d_sharp_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'D_sharp_minor'" uncheckable>D# Minor</label>
+<!--            <label class="E_flat_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'E_flat_minor'" uncheckable>Eb Minor</label>-->
+            <label class="e_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'E_minor'" uncheckable>E Minor</label>
+            <label class="f_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'F_minor'" uncheckable>F Minor</label>
+            <label class="f_sharp_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'F_sharp_minor'" uncheckable>F# Minor</label>
+            <label class="g_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'G_minor'" uncheckable>G Minor</label>
+            <label class="g_sharp_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'G_sharp_minor'" uncheckable>G# Minor</label>
+<!--            <label class="A_flat_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'A_flat_minor'" uncheckable>Ab Minor</label>-->
+            <label class="a_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'A_minor'" uncheckable>A Minor</label>
+            <label class="a_sharp_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'A_sharp_minor'" uncheckable>A# Minor</label>
+            <label class="b_flat_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'B_flat_minor'" uncheckable>Bb Minor</label>
+            <label class="b_minor btn btn-outline-primary  col" ng-model="selectedKey" uib-btn-radio="'B_minor'" uncheckable>B Minor</label>
+        </div>
+    </div>
+    <div class="metal_border">
+        
+    </div>
+
+    <div class="piano col" ng-class="selectedKey">
+
+        <div id="a0" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 0, 'a')"><div class="scale_btm akey"></div></div>
+        <div id="ab0" class="black-key" ng-mousedown="handleClickedKeySelection($event, 0, 'ab')"><div class="scale_btm abkey"></div></div>
+        <div id="b0" class="white-key unused" ng-mousedown="handleClickedKeySelection($event, 0, 'b')"><div class="scale_btm bkey"></div></div>
+
+
+        <div id="c1" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 1, 'c')"><div class="scale_btm ckey"></div></div>
+        <div id="cd1" class="black-key" ng-mousedown="handleClickedKeySelection($event, 1, 'cd')"><div class="scale_btm cdkey"></div></div>
+        <div id="d1" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 1, 'd')"><div class="scale_btm dkey"></div></div>
+        <div id="de1" class="black-key" ng-mousedown="handleClickedKeySelection($event, 1, 'de')"><div class="scale_btm dekey"></div></div>
+        <div id="e1" class="white-key unused" ng-mousedown="handleClickedKeySelection($event, 1, 'e')"><div class="scale_btm ekey"></div></div>
+        <div id="f1" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 1, 'f')"><div class="scale_btm fkey"></div></div>
+        <div id="fg1" class="black-key" ng-mousedown="handleClickedKeySelection($event, 1, 'fg')"><div class="scale_btm fgkey"></div></div>
+        <div id="g1" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 1, 'g')"><div class="scale_btm gkey"></div></div>
+        <div id="ga1" class="black-key" ng-mousedown="handleClickedKeySelection($event, 1, 'ga')"><div class="scale_btm gakey"></div></div>
+        <div id="a1" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 1, 'a')"><div class="scale_btm akey"></div></div>
+        <div id="ab1" class="black-key" ng-mousedown="handleClickedKeySelection($event, 1, 'ab')"><div class="scale_btm abkey"></div></div>
+        <div id="b1" class="white-key" ng-mousedown="handleClickedKeySelection($event, 1, 'b')"><div class="scale_btm bkey"></div></div>
+
+
+        <div id="c2" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 2, 'c')"><div class="scale_btm ckey"></div></div>
+        <div id="cd2" class="black-key" ng-mousedown="handleClickedKeySelection($event, 2, 'cd')"><div class="scale_btm cdkey"></div></div>
+        <div id="d2" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 2, 'd')"><div class="scale_btm dkey"></div></div>
+        <div id="de2" class="black-key" ng-mousedown="handleClickedKeySelection($event, 2, 'de')"><div class="scale_btm dekey"></div></div>
+        <div id="e2" class="white-key" ng-mousedown="handleClickedKeySelection($event, 2, 'e')"><div class="scale_btm ekey"></div></div>
+        <div id="f2" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 2, 'f')"><div class="scale_btm fkey"></div></div>
+        <div id="fg2" class="black-key" ng-mousedown="handleClickedKeySelection($event, 2, 'fg')"><div class="scale_btm fgkey"></div></div>
+        <div id="g2" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 2, 'g')"><div class="scale_btm gkey"></div></div>
+        <div id="ga2" class="black-key" ng-mousedown="handleClickedKeySelection($event, 2, 'ga')"><div class="scale_btm gakey"></div></div>
+        <div id="a2" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 2, 'a')"><div class="scale_btm akey"></div></div>
+        <div id="ab2" class="black-key" ng-mousedown="handleClickedKeySelection($event, 2, 'ab')"><div class="scale_btm abkey"></div></div>
+        <div id="b2" class="white-key" ng-mousedown="handleClickedKeySelection($event, 2, 'b')"><div class="scale_btm bkey"></div></div>
+
+
+        <div id="c3" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 3, 'c')"><div class="scale_btm ckey"></div></div>
+        <div id="cd3" class="black-key" ng-mousedown="handleClickedKeySelection($event, 3, 'cd')"><div class="scale_btm cdkey"></div></div>
+        <div id="d3" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 3, 'd')"><div class="scale_btm dkey"></div></div>
+        <div id="de3" class="black-key" ng-mousedown="handleClickedKeySelection($event, 3, 'de')"><div class="scale_btm dekey"></div></div>
+        <div id="e3" class="white-key" ng-mousedown="handleClickedKeySelection($event, 3, 'e')"><div class="scale_btm ekey"></div></div>
+        <div id="f3" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 3, 'f')"><div class="scale_btm fkey"></div></div>
+        <div id="fg3" class="black-key" ng-mousedown="handleClickedKeySelection($event, 3, 'fg')"><div class="scale_btm fgkey"></div></div>
+        <div id="g3" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 3, 'g')"><div class="scale_btm gkey"></div></div>
+        <div id="ga3" class="black-key" ng-mousedown="handleClickedKeySelection($event, 3, 'ga')"><div class="scale_btm gakey"></div></div>
+        <div id="a3" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 3, 'a')"><div class="scale_btm akey"></div></div>
+        <div id="ab3" class="black-key" ng-mousedown="handleClickedKeySelection($event, 3, 'ab')"><div class="scale_btm abkey"></div></div>
+        <div id="b3" class="white-key" ng-mousedown="handleClickedKeySelection($event, 3, 'b')"><div class="scale_btm bkey"></div></div>
+
+
+        <div id="c4" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 4, 'c')"><div class="scale_btm ckey"></div></div>
+        <div id="cd4" class="black-key" ng-mousedown="handleClickedKeySelection($event, 4, 'cd')"><div class="scale_btm cdkey"></div></div>
+        <div id="d4" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 4, 'd')"><div class="scale_btm dkey"></div></div>
+        <div id="de4" class="black-key" ng-mousedown="handleClickedKeySelection($event, 4, 'de')"><div class="scale_btm dekey"></div></div>
+        <div id="e4" class="white-key" ng-mousedown="handleClickedKeySelection($event, 4, 'e')"><div class="scale_btm ekey"></div></div>
+        <div id="f4" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 4, 'f')"><div class="scale_btm fkey"></div></div>
+        <div id="fg4" class="black-key" ng-mousedown="handleClickedKeySelection($event, 4, 'fg')"><div class="scale_btm fgkey"></div></div>
+        <div id="g4" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 4, 'g')"><div class="scale_btm gkey"></div></div>
+        <div id="ga4" class="black-key" ng-mousedown="handleClickedKeySelection($event, 4, 'ga')"><div class="scale_btm gakey"></div></div>
+        <div id="a4" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 4, 'a')"><div class="scale_btm akey"></div></div>
+        <div id="ab4" class="black-key" ng-mousedown="handleClickedKeySelection($event, 4, 'ab')"><div class="scale_btm abkey"></div></div>
+        <div id="b4" class="white-key" ng-mousedown="handleClickedKeySelection($event, 4, 'b')"><div class="scale_btm bkey"></div></div>
+
+
+        <div id="c5" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 5, 'c')"><div class="scale_btm ckey"></div></div>
+        <div id="cd5" class="black-key" ng-mousedown="handleClickedKeySelection($event, 5, 'cd')"><div class="scale_btm cdkey"></div></div>
+        <div id="d5" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 5, 'd')"><div class="scale_btm dkey"></div></div>
+        <div id="de5" class="black-key" ng-mousedown="handleClickedKeySelection($event, 5, 'de')"><div class="scale_btm dekey"></div></div>
+        <div id="e5" class="white-key" ng-mousedown="handleClickedKeySelection($event, 5, 'e')"><div class="scale_btm ekey"></div></div>
+        <div id="f5" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 5, 'f')"><div class="scale_btm fkey"></div></div>
+        <div id="fg5" class="black-key" ng-mousedown="handleClickedKeySelection($event, 5, 'fg')"><div class="scale_btm fgkey"></div></div>
+        <div id="g5" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 5, 'g')"><div class="scale_btm gkey"></div></div>
+        <div id="ga5" class="black-key" ng-mousedown="handleClickedKeySelection($event, 5, 'ga')"><div class="scale_btm gakey"></div></div>
+        <div id="a5" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 5, 'a')"><div class="scale_btm akey"></div></div>
+        <div id="ab5" class="black-key" ng-mousedown="handleClickedKeySelection($event, 5, 'ab')"><div class="scale_btm abkey"></div></div>
+        <div id="b5" class="white-key" ng-mousedown="handleClickedKeySelection($event, 5, 'b')"><div class="scale_btm bkey"></div></div>
+
+
+        <div id="c6" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 6, 'c')"><div class="scale_btm ckey"></div></div>
+        <div id="cd6" class="black-key" ng-mousedown="handleClickedKeySelection($event, 6, 'cd')"><div class="scale_btm cdkey"></div></div>
+        <div id="d6" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 6, 'd')"><div class="scale_btm dkey"></div></div>
+        <div id="de6" class="black-key" ng-mousedown="handleClickedKeySelection($event, 6, 'de')"><div class="scale_btm dekey"></div></div>
+        <div id="e6" class="white-key" ng-mousedown="handleClickedKeySelection($event, 6, 'e')"><div class="scale_btm ekey"></div></div>
+        <div id="f6" class="white-key shift" ng-mousedown="handleClickedKeySelection($event, 6, 'f')"><div class="scale_btm fkey"></div></div>
+        <div id="fg6" class="black-key" ng-mousedown="handleClickedKeySelection($event, 6, 'fg')"><div class="scale_btm fgkey"></div></div>
+        <div id="g6" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 6, 'g')"><div class="scale_btm gkey"></div></div>
+        <div id="ga6" class="black-key" ng-mousedown="handleClickedKeySelection($event, 6, 'ga')"><div class="scale_btm gakey"></div></div>
+        <div id="a6" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 6, 'a')"><div class="scale_btm akey"></div></div>
+        <div id="ab6" class="black-key" ng-mousedown="handleClickedKeySelection($event, 6, 'ab')"><div class="scale_btm abkey"></div></div>
+        <div id="b6" class="white-key unused" ng-mousedown="handleClickedKeySelection($event, 6, 'b')"><div class="scale_btm bkey"></div></div>
+
+
+        <div id="c7" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 7, 'c')"><div class="scale_btm ckey"></div></div>
+        <div id="cd7" class="black-key" ng-mousedown="handleClickedKeySelection($event, 7, 'cd')"><div class="scale_btm cdkey"></div></div>
+        <div id="d7" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 7, 'd')"><div class="scale_btm dkey"></div></div>
+        <div id="de7" class="black-key" ng-mousedown="handleClickedKeySelection($event, 7, 'de')"><div class="scale_btm dekey"></div></div>
+        <div id="e7" class="white-key unused" ng-mousedown="handleClickedKeySelection($event, 7, 'e')"><div class="scale_btm ekey"></div></div>
+        <div id="f7" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 7, 'f')"><div class="scale_btm fkey"></div></div>
+        <div id="fg7" class="black-key" ng-mousedown="handleClickedKeySelection($event, 7, 'fg')"><div class="scale_btm fgkey"></div></div>
+        <div id="g7" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 7, 'g')"><div class="scale_btm gkey"></div></div>
+        <div id="ga7" class="black-key" ng-mousedown="handleClickedKeySelection($event, 7, 'ga')"><div class="scale_btm gakey"></div></div>
+        <div id="a7" class="white-key shift unused" ng-mousedown="handleClickedKeySelection($event, 7, 'a')"><div class="scale_btm akey"></div></div>
+        <div id="ab7" class="black-key" ng-mousedown="handleClickedKeySelection($event, 7, 'ab')"><div class="scale_btm abkey"></div></div>
+        <div id="b7" class="white-key unused" ng-mousedown="handleClickedKeySelection($event, 7, 'b')"><div class="scale_btm bkey"></div></div>
+
+
+        <div id="c8" class="white-key unused" ng-mousedown="handleClickedKeySelection($event, 8, 'c')"><div class="scale_btm ckey"></div></div>
+
+
+    </div>
+</div>

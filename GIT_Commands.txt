@@ -1,0 +1,306 @@
+great GIT Reference Site: http://gitref.org/index.html
+and http://git-scm.com/book
+
+
+**********************************************************************************************
+
+Most Commonly Used GIT Commands:
+
+**********************************************************************************************
+
+git add only files changed and not listed in .gitignore
+
+git add `git status | grep modified | sed 's/\(.*modified:\s*\)//'`
+
+or
+
+$ git ls-files --modified | xargs git add
+
+source: https://stackoverflow.com/questions/7124726/git-add-only-modified-changes-and-ignore-untracked-files
+
+**********************************************************************************************
+
+# Sets the default name for git to use when you commit
+
+git config --global user.name "Your Name Here"
+
+**********************************************************************************************
+
+# Sets the default email for git to use when you commit
+
+git config --global user.email "your_email@example.com"
+
+**********************************************************************************************
+
+# Init the new GIT repo inside repo directory
+
+git init
+
+**********************************************************************************************
+
+# Create a remote origin pointing at our GitHub repo
+# This will now always be your origin for this repository in this directory
+
+git remote add origin https://github.com/gwrs/mbk.git
+
+**********************************************************************************************
+# Clone a specific branch
+
+git clone -b <branch> <remote_repo>
+
+example:
+
+git clone -b unjava https://kwkelly%40usgs.gov@my.usgs.gov/stash/scm/swap/website.git
+
+OR
+
+Just clone the project and checkout the branch
+
+git checkout 15117ds
+
+**********************************************************************************************
+MERGE A BRANCH INTO A MASTER
+sRC: https://stackoverflow.com/questions/33503686/how-do-i-merge-a-branch-into-a-master-in-github
+
+first checkout to master branch,
+
+git checkout master
+
+Now pull the latest changes in master,
+
+git pull origin master
+
+Merge with the testBranch
+
+git merge testBranch
+
+Push the changes to master
+
+git push origin master
+
+**********************************************************************************************
+DELETE LOCAL AND REMOTE BRANCH
+SRC: https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely
+
+Deleting a remote branch:
+
+git push origin --delete <branch>  # Git version 1.7.0 or newer
+git push origin :<branch>          # Git versions older than 1.7.0
+
+Deleting a local branch:
+
+git branch --delete <branch>
+git branch -d <branch> # Shorter version
+git branch -D <branch> # Force delete un-merged branches
+
+Deleting a local remote-tracking branch:
+
+git branch --delete --remotes <remote>/<branch>
+git branch -dr <remote>/<branch> # Shorter
+
+git fetch <remote> --prune # Delete multiple obsolete tracking branches
+git fetch <remote> -p      # Shorter
+
+**********************************************************************************************
+
+# Pull everything down from the origin, you could also have done git fetch...
+
+git pull origin master
+
+# When you use pull, Git tries to automatically do your work for you.
+# It is context sensitive, so Git will merge any pulled commits into the
+# branch you are currently working in. pull automatically merges the commits
+# without letting you review them first. If you don’t closely manage your branches
+# you may run into frequent conflicts.
+
+# When you fetch, Git gathers any commits from the target branch that do not exist
+# in your current branch and stores them in your local repo. However, it does not
+# merge them with your current branch. This is particularly useful if you need to keep
+# your repo up to date but are working on something that might break if you update your
+# files. To integrate the commits into your master branch, you use merge.
+
+**********************************************************************************************
+
+# see if you have any files that have changed since your last commit
+# at first it's a good idea to do a git status after each change to see what happened
+
+git status
+
+**********************************************************************************************
+
+# add all of your recent changes to the list of files to be committed
+
+git add -A or git add *
+
+git add -a" is equivalent to "git add .; git add -u
+
+The important point about "git add ." is that it looks at the working tree and adds 
+all those paths to the staged changes if they are either changed or are new and 
+not ignored, it does not stage any 'rm' actions.
+
+"git add -u" looks at all the currently tracked files and stages the changes to 
+those files if they are different or if they have been removed. It does not add any new files, it only stages changes to already tracked files
+
+"git add -a" is a handy shortcut for doing both.
+
+**********************************************************************************************
+
+# You're satifisfied with your add, now make a commit list from that with a messege "-m"
+
+git commit -m 'A little about my next commit'
+
+**********************************************************************************************
+
+# Now push it all to the server
+
+git push origin master
+
+or
+
+git push --force origin master     to over-write what's already there
+
+
+**********************************************************************************************
+
+# FIXING BROKEN LINE ENDINGS ON WINDOWS MACHINES
+
+git config --global core.autocrlf true
+
+# COMMIT EVERYTHING BEFORE PROCEEDING WITH THE FOLLOW AND MAKE A BACKUP COPY LOCALLY
+
+git rm --cached -r .
+# Remove everything from the index.
+
+
+git reset --hard
+# Write both the index and working directory from git's database.
+
+
+git add .
+# Prepare to make a commit by staging all the files that will get normalized.
+
+# This is your chance to inspect which files were never normalized. You should 
+# get lots of messages like: "warning: CRLF will be replaced by LF in file."
+
+git commit -m "Normalize line endings"
+# Commit
+
+**********************************************************************************************
+Tagging
+
+View tags
+$ git tag
+
+Set a tag
+$ git tag -a v1.4 -m 'my version 1.4'
+
+View a specific tag by version
+$ git show v1.4
+
+Lightweight tag (just sets a version number
+$ git tag v1.4-lw
+
+By default, the git push command doesn’t transfer tags to remote servers.
+You will have to explicitly push tags to a shared server after you have created 
+them. This process is just like sharing remote branches — you can run git 
+push origin [tagname].  (After setting the tag)
+$ git push origin v1.5
+
+**********************************************************************************************
+
+Git Stash: Saves your working directory and index to a safe place. and 2) Restores your working directory and index to the most recent commit.
+
+Stash your work: $ git stash
+
+everything is back the way it was before your last pull/checkout
+
+reload your stashed: $ git stash pop or $ git stash apply (reloads last one stashed if there is more than one)
+
+To see which stashes you’ve stored, you can use: $ git stash list:
+
+**********************************************************************************************
+
+stop watching files that have been commited
+
+git rm --cached <file>
+
+**********************************************************************************************
+
+Branches
+
+In your github fork, you need to keep your master branch clean, by clean I mean without any changes,
+like that you can create at any time a branch from your master. Each time that you want to commit a bug
+or a feature, you need to create a branch for it, which will be a copy of your master branch.
+
+When you do a pull request on a branch, you can continue to work on another branch and make another
+pull request on this other branch.
+
+Before creating a new branch, pull the changes from upstream. Your master needs to be up to date.
+
+*************
+Create and push steps
+
+Create the branch on your local machine and switch to this branch :
+$ git checkout -b [name_of_your_new_branch]
+
+Change working branch :
+$ git checkout [name_of_your_new_branch]
+
+Set and Push to Upstream
+git push --set-upstream origin [name_of_your_new_branch]
+
+Push the branch on github :
+$ git push origin [name_of_your_new_branch]
+
+*************
+
+When you want to commit something in your branch, be sure to be in your branch. Add -u parameter to set upstream.
+
+You can see all branches created by using :
+$ git branch
+Which will show :
+* approval_messages
+  master
+  master_clean
+
+Add a new remote for your branch :
+$ git remote add [name_of_your_remote] [name_of_your_new_branch]
+
+Push changes from your commit into your branch :
+$ git push [name_of_your_new_remote] [url]
+
+Update your branch when the original branch from official repository has been updated :
+$ git fetch [name_of_your_remote]
+
+Then you need to apply to merge changes, if your branch is derivated from develop you need to do :
+$ git merge [name_of_your_remote]/develop
+
+Delete a branch on your local filesystem :
+$ git branch -d [name_of_your_new_branch]
+
+To force the deletion of local branch on your filesystem :
+$ git branch -D [name_of_your_new_branch]
+
+Delete the branch on github :
+$ git push origin :[name_of_your_new_branch]
+
+The only difference is the : to say delete, you can do it too by using github interface to remove branch : https://help.github.com/articles/deleting-unused-branches.
+If you want to change default branch, it's so easy with github, in your fork go into Admin and in the drop-down list default branch choose what you want.
+
+**********************************************************************************************
+
+Branch - Rename a local and remote branch in git
+
+1. Rename your local branch.
+If you are on the branch you want to rename:
+git branch -m new-name
+If you are on a different branch:
+git branch -m old-name new-name
+
+2. Delete the old-name remote branch and push the new-name local branch.
+git push origin :old-name new-name
+
+3. Reset the upstream branch for the new-name local branch.
+
+Switch to the branch and then:
+git push origin -u new-name

@@ -1,0 +1,60 @@
+
+
+/* SCORE-MODULE.CSS DEPLOY_ADD */
+
+.score-module {
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    margin: 0px;
+}
+.score-module #correct {
+    text-align: left;
+    border-radius: 4px;
+    height: 24px;
+    line-height: 24px;
+    cursor: default;
+    -webkit-transition:all linear 0.1s;
+    transition:all linear 0.1s;
+}
+
+.score-module #correct span {
+    color: green;
+}
+
+.score-module #correct.changed {
+    background-color: #00ff00;
+}
+
+.score-module #bonus {
+    text-align: center;
+    border-radius: 4px;
+    height: 24px;
+    line-height: 24px;
+    cursor: default;
+    color: green;
+    -webkit-transition:all linear 0.1s;
+    transition:all linear 0.1s;
+}
+
+.score-module #bonus.changed {
+    background-color: #00ff00;
+}
+
+.score-module #incorrect {
+    text-align: right;
+    border-radius: 4px;
+    height: 24px;
+    line-height: 24px;
+    cursor: default;
+    -webkit-transition:all linear 0.1s;
+    transition:all linear 0.1s;
+}
+
+.score-module #incorrect.changed {
+    background-color: #ff0000;
+}
+
+.score-module #incorrect span {
+    color: red;
+}

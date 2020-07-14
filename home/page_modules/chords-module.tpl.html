@@ -1,0 +1,148 @@
+<div class="chords_module row" ng-class="selectedKey">
+
+    <div class="key_col col row_head">
+        <div class="key_corner">&nbsp;</div>
+        <div class="key_name"><span ng-if="!keyNotes.cs">C</span><span ng-if="keyNotes.cs">B#</span></div>
+        <div class="key_name">D</div>
+        <div class="key_name"><span ng-if="!keyNotes.ef">E</span><span ng-if="keyNotes.ef">Fb</span></div>
+        <div class="key_name"><span ng-if="!keyNotes.fs">F</span><span ng-if="keyNotes.fs">E#</span></div>
+        <div class="key_name">G</div>
+        <div class="key_name">A</div>
+        <div class="key_name"><span ng-if="!keyNotes.bf">B</span><span ng-if="keyNotes.bf">Cb</span></div>
+        <div class="key_name"><span ng-if="keyIsSharp">C#</span><span ng-if="!keyIsSharp">Db</span></div>
+        <div class="key_name"><span ng-if="keyIsSharp">D#</span><span ng-if="!keyIsSharp">Eb</span></div>
+        <div class="key_name"><span ng-if="keyIsSharp">F#</span><span ng-if="!keyIsSharp">Gb</span></div>
+        <div class="key_name"><span ng-if="keyIsSharp">G#</span><span ng-if="!keyIsSharp">Ab</span></div>
+        <div class="key_name"><span ng-if="keyIsSharp">A#</span><span ng-if="!keyIsSharp">Bb</span></div>
+    </div>
+
+    <div class="key_col col">
+        <div class="key_corner">MAJOR</div>
+        <div id="c_major" class="chord_mod" data-ckeys-module></div>
+        <div id="d_major" class="chord_mod" data-ckeys-module></div>
+        <div id="e_major" class="chord_mod" data-ckeys-module></div>
+        <div id="f_major" class="chord_mod" data-ckeys-module></div>
+        <div id="g_major" class="chord_mod" data-ckeys-module></div>
+        <div id="a_major" class="chord_mod" data-ckeys-module></div>
+        <div id="b_major" class="chord_mod" data-ckeys-module></div>
+        <div id="cd_major" class="chord_mod" data-ckeys-module></div>
+        <div id="de_major" class="chord_mod" data-ckeys-module></div>
+        <div id="fg_major" class="chord_mod" data-ckeys-module></div>
+        <div id="ga_major" class="chord_mod" data-ckeys-module></div>
+        <div id="ab_major" class="chord_mod" data-ckeys-module></div>
+    </div>
+
+    <div class="key_col col">
+        <div class="key_corner">MINOR</div>
+        <div id="c_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="d_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="e_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="f_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="g_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="a_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="b_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="cd_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="de_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="fg_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="ga_minor" class="chord_mod" data-ckeys-module></div>
+        <div id="ab_minor" class="chord_mod" data-ckeys-module></div>
+    </div>
+
+    <div class="key_col col">
+        <div class="key_corner">MAJOR 7TH</div>
+        <div id="c_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="d_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="e_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="f_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="g_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="a_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="b_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="cd_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="de_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="fg_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="ga_major7th" class="chord_mod" data-ckeys-module></div>
+        <div id="ab_major7th" class="chord_mod" data-ckeys-module></div>
+    </div>
+
+    <div class="key_col col">
+        <div class="key_corner">DOMINANT 7TH</div>
+        <div id="c_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="d_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="e_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="f_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="g_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="a_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="b_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="cd_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="de_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="fg_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="ga_dominant7th" class="chord_mod" data-ckeys-module></div>
+        <div id="ab_dominant7th" class="chord_mod" data-ckeys-module></div>
+    </div>
+
+    <div class="key_col col">
+        <div class="key_corner">MINOR 7TH</div>
+        <div id="c_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="d_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="e_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="f_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="g_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="a_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="b_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="cd_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="de_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="fg_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="ga_minor7th" class="chord_mod" data-ckeys-module></div>
+        <div id="ab_minor7th" class="chord_mod" data-ckeys-module></div>
+    </div>
+
+    <div class="key_col col">
+        <div class="key_corner">DIMINISHED</div>
+        <div id="c_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="d_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="e_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="f_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="g_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="a_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="b_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="cd_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="de_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="fg_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="ga_diminished" class="chord_mod" data-ckeys-module></div>
+        <div id="ab_diminished" class="chord_mod" data-ckeys-module></div>
+    </div>
+
+    <div class="key_col col">
+        <div class="key_corner">MINOR 7th FLAT 5</div>
+        <div id="c_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="d_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="e_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="f_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="g_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="a_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="b_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="cd_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="de_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="fg_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="ga_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+        <div id="ab_minor7thflat5" class="chord_mod" data-ckeys-module></div>
+    </div>
+
+    <!--    
+    <div class="key_col col">
+        <div class="key_corner">AUGMENTED</div>
+        <div id="c_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="d_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="e_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="f_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="g_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="a_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="b_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="cd_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="de_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="fg_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="ga_augmented" class="chord_mod" data-ckeys-module></div>
+        <div id="ab_augmented" class="chord_mod" data-ckeys-module></div>
+    </div>
+    -->
+</div>

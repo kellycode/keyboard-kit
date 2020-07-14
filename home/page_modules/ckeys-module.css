@@ -1,0 +1,614 @@
+
+
+/* CKEYS-MODULE.CSS DEPLOY_ADD */
+
+.ckeys_module {
+    position: relative;
+    margin: 0px;
+    height: 100%;
+    background-color: #efefef;
+}
+
+.ckeys_module .white_keys.row {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+.ckeys_module .white-key.col {
+    height: 100%;
+    border: 1px solid black;
+    height: 100%;
+    z-index: 1;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ckeys_module .black_keys {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 68%;
+    margin: 0px;
+}
+
+.ckeys_module .black-key {
+    position: absolute;
+    top: 0px;
+    background-color: black;
+    height: 100%;
+    width: 5%;
+    z-index: 2;
+    border: 1px solid black;
+}
+
+/* color the chords for the active key */
+
+.C_major #c_major .ckeys_module,
+.C_major #d_minor .ckeys_module,
+.C_major #e_minor .ckeys_module,
+.C_major #f_major .ckeys_module,
+.C_major #g_major .ckeys_module,
+.C_major #a_minor .ckeys_module,
+.C_major #b_diminished .ckeys_module,
+
+.C_major #c_major7th .ckeys_module,
+.C_major #d_minor7th .ckeys_module,
+.C_major #e_minor7th .ckeys_module,
+.C_major #f_major7th .ckeys_module,
+.C_major #g_dominant7th .ckeys_module,
+.C_major #a_minor7th .ckeys_module,
+.C_major #b_minor7thflat5 .ckeys_module {
+    background-color: lightslategray;
+}
+
+.C_sharp_major #cd_major .ckeys_module, /* C# major */
+.C_sharp_major #de_minor .ckeys_module, /* D# minor */
+.C_sharp_major #f_minor .ckeys_module, /* E# minor */
+.C_sharp_major #fg_major .ckeys_module, /* F# major */
+.C_sharp_major #ga_major .ckeys_module, /* G# major */
+.C_sharp_major #ab_minor .ckeys_module, /* A# minor */
+.C_sharp_major #c_diminished .ckeys_module, /* B# diminished */
+
+.C_sharp_major #cd_major7th .ckeys_module, /* C# major7th */
+.C_sharp_major #de_minor7th .ckeys_module, /* D# minor7th */
+.C_sharp_major #f_minor7th .ckeys_module, /* E# minor7th */
+.C_sharp_major #fg_major7th .ckeys_module, /* F# major7th */
+.C_sharp_major #ga_dominant7th .ckeys_module, /* G# dominant7th */
+.C_sharp_major #ab_minor7th .ckeys_module, /* A# minor7th */
+.C_sharp_major #c_minor7thflat5 .ckeys_module /* B# minor7thflat5 */  {
+    background-color: lightslategray;
+}
+
+.D_flat_major #cd_major .ckeys_module, /* Db major */
+.D_flat_major #de_minor .ckeys_module, /* Eb minor */
+.D_flat_major #f_minor .ckeys_module, /* F minor */
+.D_flat_major #fg_major .ckeys_module, /* Gb major */
+.D_flat_major #ga_major .ckeys_module, /* Ab major */
+.D_flat_major #ab_minor .ckeys_module, /* Bb minor */
+.D_flat_major #c_diminished .ckeys_module, /* C diminished */
+
+.D_flat_major #cd_major7th .ckeys_module, /* Db major7th */
+.D_flat_major #de_minor7th .ckeys_module, /* Eb minor7th */
+.D_flat_major #f_minor7th .ckeys_module, /* F minor7th */
+.D_flat_major #fg_major7th .ckeys_module, /* Gb major7th */
+.D_flat_major #ga_dominant7th .ckeys_module, /* Ab dominant7th */
+.D_flat_major #ab_minor7th .ckeys_module, /* Bb minor7th */
+.D_flat_major #c_minor7thflat5 .ckeys_module /* C minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.D_major #d_major .ckeys_module, /* D major */
+.D_major #e_minor .ckeys_module, /* E minor */
+.D_major #fg_minor .ckeys_module, /* F# minor */
+.D_major #g_major .ckeys_module, /* G major */
+.D_major #a_major .ckeys_module, /* A major */
+.D_major #b_minor .ckeys_module, /* B minor */
+.D_major #cd_diminished .ckeys_module, /* C# diminished */
+
+.D_major #d_major7th .ckeys_module, /* D major7th */
+.D_major #e_minor7th .ckeys_module, /* E minor7th */
+.D_major #fg_minor7th .ckeys_module, /* F# minor7th */
+.D_major #g_major7th .ckeys_module, /* G major7th */
+.D_major #a_dominant7th .ckeys_module, /* A dominant7th */
+.D_major #b_minor7th .ckeys_module, /* B minor7th */
+.D_major #cd_minor7thflat5 .ckeys_module /* C# minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.E_flat_major #de_major .ckeys_module, /* Eb major */
+.E_flat_major #f_minor .ckeys_module, /* F minor */
+.E_flat_major #g_minor .ckeys_module, /* G minor */
+.E_flat_major #ga_major .ckeys_module, /* Ab major */
+.E_flat_major #ab_major .ckeys_module, /* Bb major */
+.E_flat_major #c_minor .ckeys_module, /* C minor */
+.E_flat_major #d_diminished .ckeys_module, /* D diminished */
+
+.E_flat_major #de_major7th .ckeys_module, /* Eb major7th */
+.E_flat_major #f_minor7th .ckeys_module, /* F minor7th */
+.E_flat_major #g_minor7th .ckeys_module, /* G minor7th */
+.E_flat_major #ga_major7th .ckeys_module, /* Ab major7th */
+.E_flat_major #ab_dominant7th .ckeys_module, /* Bb dominant7th */
+.E_flat_major #c_minor7th .ckeys_module, /* C minor7th */
+.E_flat_major #d_minor7thflat5 .ckeys_module /* D minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.E_major #e_major .ckeys_module, /* E major */
+.E_major #fg_minor .ckeys_module, /* F# minor */
+.E_major #ga_minor .ckeys_module, /* G# minor */
+.E_major #a_major .ckeys_module, /* A major */
+.E_major #b_major .ckeys_module, /* B major */
+.E_major #cd_minor .ckeys_module, /* C# minor */
+.E_major #de_diminished .ckeys_module, /* D# diminished */
+
+.E_major #e_major7th .ckeys_module, /* E major7th */
+.E_major #fg_minor7th .ckeys_module, /* F# minor7th */
+.E_major #ga_minor7th .ckeys_module, /* G# minor7th */
+.E_major #a_major7th .ckeys_module, /* A major7th */
+.E_major #b_dominant7th .ckeys_module, /* B dominant7th */
+.E_major #cd_minor7th .ckeys_module, /* C# minor7th */
+.E_major #de_minor7thflat5 .ckeys_module /* D# minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.F_major #f_major .ckeys_module, /* F major */
+.F_major #g_minor .ckeys_module, /* G minor */
+.F_major #a_minor .ckeys_module, /* A minor */
+.F_major #ab_major .ckeys_module, /* Bb major */
+.F_major #c_major .ckeys_module, /* C major */
+.F_major #d_minor .ckeys_module, /* D minor */
+.F_major #e_diminished .ckeys_module, /* E diminished */
+
+.F_major #f_major7th .ckeys_module, /* F major7th */
+.F_major #g_minor7th .ckeys_module, /* G minor7th */
+.F_major #a_minor7th .ckeys_module, /* A minor7th */
+.F_major #ab_major7th .ckeys_module, /* Bb major7th */
+.F_major #c_dominant7th .ckeys_module, /* C dominant7th */
+.F_major #d_minor7th .ckeys_module, /* D minor7th */
+.F_major #e_minor7thflat5 .ckeys_module /* E minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.F_sharp_major #fg_major .ckeys_module, /* F# major */
+.F_sharp_major #ga_minor .ckeys_module, /* G# minor */
+.F_sharp_major #ab_minor .ckeys_module, /* A# minor */
+.F_sharp_major #b_major .ckeys_module, /* B major */
+.F_sharp_major #cd_major .ckeys_module, /* C# major */
+.F_sharp_major #de_minor .ckeys_module, /* D# minor */
+.F_sharp_major #f_diminished .ckeys_module, /* E# diminished */
+
+.F_sharp_major #fg_major7th .ckeys_module, /* F# major7th */
+.F_sharp_major #ga_minor7th .ckeys_module, /* G# minor7th */
+.F_sharp_major #ab_minor7th .ckeys_module, /* A# minor7th */
+.F_sharp_major #b_major7th .ckeys_module, /* B major7th */
+.F_sharp_major #cd_dominant7th .ckeys_module, /* C# dominant7th */
+.F_sharp_major #de_minor7th .ckeys_module, /* D# minor7th */
+.F_sharp_major #f_minor7thflat5 .ckeys_module /* E# minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.G_major #g_major .ckeys_module, /* G major */
+.G_major #a_minor .ckeys_module, /* A minor */
+.G_major #b_minor .ckeys_module, /* B minor */
+.G_major #c_major .ckeys_module, /* C major */
+.G_major #d_major .ckeys_module, /* D major */
+.G_major #e_minor .ckeys_module, /* E minor */
+.G_major #fg_diminished .ckeys_module, /* F# diminished */
+
+.G_major #g_major7th .ckeys_module, /* G major7th */
+.G_major #a_minor7th .ckeys_module, /* A minor7th */
+.G_major #b_minor7th .ckeys_module, /* B minor7th */
+.G_major #c_major7th .ckeys_module, /* C major7th */
+.G_major #d_dominant7th .ckeys_module, /* D dominant7th */
+.G_major #e_minor7th .ckeys_module, /* E minor7th */
+.G_major #fg_minor7thflat5 .ckeys_module /* F# minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.G_sharp_major #ga_major .ckeys_module, /* Ab major */
+.G_sharp_major #ab_minor .ckeys_module, /* Bb minor */
+.G_sharp_major #c_minor .ckeys_module, /* C minor */
+.G_sharp_major #cd_major .ckeys_module, /* Db major */
+.G_sharp_major #de_major .ckeys_module, /* Eb major */
+.G_sharp_major #f_minor .ckeys_module, /* F minor */
+.G_sharp_major #g_diminished .ckeys_module, /* G diminished */
+
+.G_sharp_major #ga_major7th .ckeys_module, /* Ab major7th */
+.G_sharp_major #ab_minor7th .ckeys_module, /* Bb minor7th */
+.G_sharp_major #c_minor7th .ckeys_module, /* C minor7th */
+.G_sharp_major #cd_major7th .ckeys_module, /* Db major7th */
+.G_sharp_major #de_dominant7th .ckeys_module, /* Eb dominant7th */
+.G_sharp_major #f_minor7th .ckeys_module, /* F minor7th */
+.G_sharp_major #g_minor7thflat5 .ckeys_module /* G minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.A_flat_major #ga_major .ckeys_module, /* Ab major */
+.A_flat_major #ab_minor .ckeys_module, /* Bb minor */
+.A_flat_major #c_minor .ckeys_module, /* C minor */
+.A_flat_major #cd_major .ckeys_module, /* Db major */
+.A_flat_major #de_major .ckeys_module, /* Eb major */
+.A_flat_major #f_minor .ckeys_module, /* F minor */
+.A_flat_major #g_diminished .ckeys_module, /* G diminished */
+
+.A_flat_major #ga_major7th .ckeys_module, /* Ab major7th */
+.A_flat_major #ab_minor7th .ckeys_module, /* Bb minor7th */
+.A_flat_major #c_minor7th .ckeys_module, /* C minor7th */
+.A_flat_major #cd_major7th .ckeys_module, /* Db major7th */
+.A_flat_major #de_dominant7th .ckeys_module, /* Eb dominant7th */
+.A_flat_major #f_minor7th .ckeys_module, /* F minor7th */
+.A_flat_major #g_minor7thflat5 .ckeys_module /* G minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.A_major #a_major .ckeys_module, /* A major */
+.A_major #b_minor .ckeys_module, /* B minor */
+.A_major #cd_minor .ckeys_module, /* C# minor */
+.A_major #d_major .ckeys_module, /* D major */
+.A_major #e_major .ckeys_module, /* E major */
+.A_major #fg_minor .ckeys_module, /* F# minor */
+.A_major #ga_diminished .ckeys_module, /* G# diminished */
+
+.A_major #a_major7th .ckeys_module, /* A major7th */
+.A_major #b_minor7th .ckeys_module, /* B minor7th */
+.A_major #cd_minor7th .ckeys_module, /* C# minor7th */
+.A_major #d_major7th .ckeys_module, /* D major7th */
+.A_major #e_dominant7th .ckeys_module, /* E dominant7th */
+.A_major #fg_minor7th .ckeys_module, /* F# minor7th */
+.A_major #ga_minor7thflat5 .ckeys_module /* G# minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.B_flat_major #ab_major .ckeys_module, /* Bb major */
+.B_flat_major #c_minor .ckeys_module, /* C minor */
+.B_flat_major #d_minor .ckeys_module, /* D minor */
+.B_flat_major #de_major .ckeys_module, /* Eb major */
+.B_flat_major #f_major .ckeys_module, /* F major */
+.B_flat_major #g_minor .ckeys_module, /* G minor */
+.B_flat_major #a_diminished .ckeys_module, /* A diminished */
+
+.B_flat_major #ab_major7th .ckeys_module, /* Bb major7th */
+.B_flat_major #c_minor7th .ckeys_module, /* C minor7th */
+.B_flat_major #d_minor7th .ckeys_module, /* D minor7th */
+.B_flat_major #de_major7th .ckeys_module, /* Eb major7th */
+.B_flat_major #f_dominant7th .ckeys_module, /* F dominant7th */
+.B_flat_major #g_minor7th .ckeys_module, /* G minor7th */
+.B_flat_major #a_minor7thflat5 .ckeys_module /* A minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.B_major #b_major .ckeys_module, /* B major */
+.B_major #cd_minor .ckeys_module, /* C# minor */
+.B_major #de_minor .ckeys_module, /* D# minor */
+.B_major #e_major .ckeys_module, /* E major */
+.B_major #fg_major .ckeys_module, /* F# major */
+.B_major #ga_minor .ckeys_module, /* G# minor */
+.B_major #ab_diminished .ckeys_module, /* A# diminished */
+
+.B_major #b_major7th .ckeys_module, /* B major7th */
+.B_major #cd_minor7th .ckeys_module, /* C# minor7th */
+.B_major #de_minor7th .ckeys_module, /* D# minor7th */
+.B_major #e_major7th .ckeys_module, /* E major7th */
+.B_major #fg_dominant7th .ckeys_module, /* F# dominant7th */
+.B_major #ga_minor7th .ckeys_module, /* G# minor7th */
+.B_major #ab_minor7thflat5 .ckeys_module /* A# minor7thflat5 */ {
+    background-color: lightslategray;
+}
+
+.C_minor #c_minor .ckeys_module, /* C minor */
+.C_minor #d_diminished .ckeys_module, /* D diminished*/
+.C_minor #de_major .ckeys_module, /* Eb major */
+.C_minor #f_minor .ckeys_module, /* F minor */
+.C_minor #g_minor .ckeys_module, /* G minor */
+.C_minor #ga_major .ckeys_module, /* Ab major */
+.C_minor #ab_major .ckeys_module, /* Bb major */
+
+.C_minor #c_minor7th .ckeys_module, /* C minor7th */
+.C_minor #d_minor7thflat5 .ckeys_module, /* D minor7thflat5 */
+.C_minor #de_major7th .ckeys_module, /* Eb major7th */
+.C_minor #f_minor7th .ckeys_module, /* F minor7th */
+.C_minor #g_minor7th .ckeys_module, /* G minor7th */
+.C_minor #ga_major7th .ckeys_module, /* Ab major7th */
+.C_minor #ab_dominant7th .ckeys_module /* Bb dominant7th */ {
+    background-color: lightslategray;
+}
+
+.C_sharp_minor #cd_minor .ckeys_module, /* C# minor */
+.C_sharp_minor #de_diminished .ckeys_module, /* D# diminished*/
+.C_sharp_minor #e_major .ckeys_module, /* E major */
+.C_sharp_minor #fg_minor .ckeys_module, /* F# minor */
+.C_sharp_minor #ga_minor .ckeys_module, /* G# minor */
+.C_sharp_minor #a_major .ckeys_module, /* A major */
+.C_sharp_minor #b_major .ckeys_module, /* B major */
+
+.C_sharp_minor #cd_minor7th .ckeys_module, /* C# minor7th */
+.C_sharp_minor #de_minor7thflat5 .ckeys_module, /* D# minor7thflat5 */
+.C_sharp_minor #e_major7th .ckeys_module, /* E major7th */
+.C_sharp_minor #fg_minor7th .ckeys_module, /* F# minor7th */
+.C_sharp_minor #ga_minor7th .ckeys_module, /* G# minor7th */
+.C_sharp_minor #a_major7th .ckeys_module, /* A major7th */
+.C_sharp_minor #b_dominant7th .ckeys_module /* B dominant7th */ {
+    background-color: lightslategray;
+}
+
+.D_minor #d_minor .ckeys_module, /* D minor */
+.D_minor #e_diminished .ckeys_module, /* E diminished*/
+.D_minor #f_major .ckeys_module, /* F major */
+.D_minor #g_minor .ckeys_module, /* G minor */
+.D_minor #a_minor .ckeys_module, /* A minor */
+.D_minor #ab_major .ckeys_module, /* Bb major */
+.D_minor #c_major .ckeys_module, /* C major */
+
+.D_minor #d_minor7th .ckeys_module, /* D minor7th */
+.D_minor #e_minor7thflat5 .ckeys_module, /* E minor7thflat5 */
+.D_minor #f_major7th .ckeys_module, /* F major7th */
+.D_minor #g_minor7th .ckeys_module, /* G minor7th */
+.D_minor #a_minor7th .ckeys_module, /* A minor7th */
+.D_minor #ab_major7th .ckeys_module, /* Bb major7th */
+.D_minor #c_dominant7th .ckeys_module /* C dominant7th */ {
+    background-color: lightslategray;
+}
+
+.D_sharp_minor #de_minor .ckeys_module, /* D# minor */
+.D_sharp_minor #f_diminished .ckeys_module, /* E# diminished*/ 
+.D_sharp_minor #fg_major .ckeys_module, /* F# major */
+.D_sharp_minor #ga_minor .ckeys_module, /* G# minor */
+.D_sharp_minor #ab_minor .ckeys_module, /* A# minor */
+.D_sharp_minor #b_major .ckeys_module, /* B major */
+.D_sharp_minor #cd_major .ckeys_module, /* C# major */
+
+.D_sharp_minor #de_minor7th .ckeys_module, /* D# minor7th */
+.D_sharp_minor #f_minor7thflat5 .ckeys_module, /* E# minor7thflat5 */ 
+.D_sharp_minor #fg_major7th .ckeys_module, /* F# major7th */
+.D_sharp_minor #ga_minor7th .ckeys_module, /* G# minor7th */
+.D_sharp_minor #ab_minor7th .ckeys_module, /* A# minor7th */
+.D_sharp_minor #b_major7th .ckeys_module, /* B major7th */
+.D_sharp_minor #cd_dominant7th .ckeys_module /* C# dominant7th */ {
+    background-color: lightslategray;
+}
+
+.E_flat_minor #de_minor .ckeys_module, /* Eb minor */
+.E_flat_minor #f_diminished .ckeys_module, /* F diminished*/ 
+.E_flat_minor #fg_major .ckeys_module, /* Gb major */
+.E_flat_minor #ga_minor .ckeys_module, /* Ab minor */
+.E_flat_minor #ab_minor .ckeys_module, /* Bb minor */
+.E_flat_minor #b_major .ckeys_module, /* Cb major */
+.E_flat_minor #cd_major .ckeys_module, /* Db major */
+
+.E_flat_minor #de_minor7th .ckeys_module, /* Eb minor7th */
+.E_flat_minor #f_minor7thflat5 .ckeys_module, /* F minor7thflat5 */
+.E_flat_minor #fg_major7th .ckeys_module, /* Gb major7th */
+.E_flat_minor #ga_minor7th .ckeys_module, /* Ab minor7th */
+.E_flat_minor #ab_minor7th .ckeys_module, /* Bb minor7th */
+.E_flat_minor #b_major7th .ckeys_module, /* Cb major7th */
+.E_flat_minor #cd_dominant7th .ckeys_module /* Db dominant7th */ {
+    background-color: lightslategray;
+}
+
+.E_minor #e_minor .ckeys_module, /* E minor */
+.E_minor #fg_diminished .ckeys_module, /* F# diminished*/
+.E_minor #g_major .ckeys_module, /* G major */
+.E_minor #a_minor .ckeys_module, /* A minor */
+.E_minor #b_minor .ckeys_module, /* B minor */
+.E_minor #c_major .ckeys_module, /* C major */
+.E_minor #d_major .ckeys_module, /* D major */
+
+.E_minor #e_minor7th .ckeys_module, /* E minor7th */
+.E_minor #fg_minor7thflat5 .ckeys_module, /* F# minor7thflat5 */
+.E_minor #g_major7th .ckeys_module, /* G major7th */
+.E_minor #a_minor7th .ckeys_module, /* A minor7th */
+.E_minor #b_minor7th .ckeys_module, /* B minor7th */
+.E_minor #c_major7th .ckeys_module, /* C major7th */
+.E_minor #d_dominant7th .ckeys_module /* D dominant7th */ {
+    background-color: lightslategray;
+}
+
+.F_minor #f_minor .ckeys_module, /* F minor */
+.F_minor #g_diminished .ckeys_module, /* G diminished*/
+.F_minor #ga_major .ckeys_module, /* Ab major */
+.F_minor #ab_minor .ckeys_module, /* Bb minor */
+.F_minor #c_minor .ckeys_module, /* C minor */
+.F_minor #cd_major .ckeys_module, /* Db major */
+.F_minor #de_major .ckeys_module, /* Eb major */
+
+.F_minor #f_minor7th .ckeys_module, /* F minor7th */
+.F_minor #g_minor7thflat5 .ckeys_module, /* G minor7thflat5 */
+.F_minor #ga_major7th .ckeys_module, /* Ab major7th */
+.F_minor #ab_minor7th .ckeys_module, /* Bb minor7th */
+.F_minor #c_minor7th .ckeys_module, /* C minor7th */
+.F_minor #cd_major7th .ckeys_module, /* Db major7th */
+.F_minor #de_dominant7th .ckeys_module /* Eb dominant7th */ {
+    background-color: lightslategray;
+}
+
+.F_sharp_minor #fg_minor .ckeys_module, /* F# minor */
+.F_sharp_minor #ga_diminished .ckeys_module, /* G# diminished*/
+.F_sharp_minor #a_major .ckeys_module, /* A major */
+.F_sharp_minor #b_minor .ckeys_module, /* B minor */
+.F_sharp_minor #cd_minor .ckeys_module, /* C# minor */
+.F_sharp_minor #d_major .ckeys_module, /* D major */
+.F_sharp_minor #e_major .ckeys_module, /* E major */
+
+.F_sharp_minor #fg_minor7th .ckeys_module, /* F# minor7th */
+.F_sharp_minor #ga_minor7thflat5 .ckeys_module, /* G# minor7thflat5 */
+.F_sharp_minor #a_major7th .ckeys_module, /* A major7th */
+.F_sharp_minor #b_minor7th .ckeys_module, /* B minor7th */
+.F_sharp_minor #cd_minor7th .ckeys_module, /* C# minor7th */
+.F_sharp_minor #d_major7th .ckeys_module, /* D major7th */
+.F_sharp_minor #e_dominant7th .ckeys_module /* E dominant7th */ {
+    background-color: lightslategray;
+}
+
+.G_minor #g_minor .ckeys_module, /* G minor */
+.G_minor #a_diminished .ckeys_module, /* A diminished*/
+.G_minor #ab_major .ckeys_module, /* Bb major */
+.G_minor #c_minor .ckeys_module, /* C minor */
+.G_minor #d_minor .ckeys_module, /* D minor */
+.G_minor #de_major .ckeys_module, /* Eb major */
+.G_minor #f_major .ckeys_module, /* F major */
+
+.G_minor #g_minor7th .ckeys_module, /* G minor7th */
+.G_minor #a_minor7thflat5 .ckeys_module, /* A minor7thflat5 */
+.G_minor #ab_major7th .ckeys_module, /* Bb major7th */
+.G_minor #c_minor7th .ckeys_module, /* C minor7th */
+.G_minor #d_minor7th .ckeys_module, /* D minor7th */
+.G_minor #de_major7th .ckeys_module, /* Eb major7th */
+.G_minor #f_dominant7th .ckeys_module /* F dominant7th */ {
+    background-color: lightslategray;
+}
+
+.G_sharp_minor #ga_minor .ckeys_module, /* G# minor */
+.G_sharp_minor #ab_diminished .ckeys_module, /* A# diminished*/
+.G_sharp_minor #b_major .ckeys_module, /* B major */
+.G_sharp_minor #cd_minor .ckeys_module, /* C# minor */
+.G_sharp_minor #de_minor .ckeys_module, /* D# minor */
+.G_sharp_minor #e_major .ckeys_module, /* E major */
+.G_sharp_minor #fg_major .ckeys_module, /* F# major */
+
+.G_sharp_minor #ga_minor7th .ckeys_module, /* G# minor7th */
+.G_sharp_minor #ab_minor7thflat5 .ckeys_module, /* A# minor7thflat5 */
+.G_sharp_minor #b_major7th .ckeys_module, /* B major7th */
+.G_sharp_minor #cd_minor7th .ckeys_module, /* C# minor7th */
+.G_sharp_minor #de_minor7th .ckeys_module, /* D# minor7th */
+.G_sharp_minor #e_major7th .ckeys_module, /* E major7th */
+.G_sharp_minor #fg_dominant7th .ckeys_module /* F# dominant7th */ {
+    background-color: lightslategray;
+}
+
+.A_flat_minor #ga_minor .ckeys_module, /* Ab minor */
+.A_flat_minor #ab_diminished .ckeys_module, /* Bb diminished*/
+.A_flat_minor #b_major .ckeys_module, /* Cb major */ 
+.A_flat_minor #cd_minor .ckeys_module, /* Db minor */
+.A_flat_minor #de_minor .ckeys_module, /* Eb minor */
+.A_flat_minor #e_major .ckeys_module, /* Fb major */ 
+.A_flat_minor #fg_major .ckeys_module, /* Gb major */
+
+.A_flat_minor #ga_minor7th .ckeys_module, /* Ab minor7th */
+.A_flat_minor #ab_minor7thflat5 .ckeys_module, /* Bb minor7thflat5 */
+.A_flat_minor #b_major7th .ckeys_module, /* Cb major7th */ 
+.A_flat_minor #cd_minor7th .ckeys_module, /* Db minor7th */
+.A_flat_minor #de_minor7th .ckeys_module, /* Eb minor7th */
+.A_flat_minor #e_major7th .ckeys_module, /* Fb major7th */ 
+.A_flat_minor #fg_dominant7th .ckeys_module /* Gb dominant7th */ {
+    background-color: lightslategray;
+}
+
+.A_minor #a_minor .ckeys_module, /* A minor */
+.A_minor #b_diminished .ckeys_module, /* B diminished*/
+.A_minor #c_major .ckeys_module, /* C major */
+.A_minor #d_minor .ckeys_module, /* D minor */
+.A_minor #e_minor .ckeys_module, /* E minor */
+.A_minor #f_major .ckeys_module, /* F major */
+.A_minor #g_major .ckeys_module, /* G major */
+
+.A_minor #a_minor7th .ckeys_module, /* A minor7th */
+.A_minor #b_minor7thflat5 .ckeys_module, /* B minor7thflat5 */
+.A_minor #c_major7th .ckeys_module, /* C major7th */
+.A_minor #d_minor7th .ckeys_module, /* D minor7th */
+.A_minor #e_minor7th .ckeys_module, /* E minor7th */
+.A_minor #f_major7th .ckeys_module, /* F major7th */
+.A_minor #g_dominant7th .ckeys_module /* G dominant7th */ {
+    background-color: lightslategray;
+}
+
+.A_sharp_minor #ab_minor .ckeys_module, /* A# minor */
+.A_sharp_minor #c_diminished .ckeys_module, /* B# diminished*/ 
+.A_sharp_minor #cd_major .ckeys_module, /* C# major */
+.A_sharp_minor #de_minor .ckeys_module, /* D# minor */
+.A_sharp_minor #f_minor .ckeys_module, /* E# minor */ 
+.A_sharp_minor #fg_major .ckeys_module, /* F# major */
+.A_sharp_minor #ga_major .ckeys_module, /* G# major */
+
+.A_sharp_minor #ab_minor7th .ckeys_module, /* A# minor7th */
+.A_sharp_minor #c_minor7thflat5 .ckeys_module, /* B# minor7thflat5 */ 
+.A_sharp_minor #cd_major7th .ckeys_module, /* C# major7th */
+.A_sharp_minor #de_minor7th .ckeys_module, /* D# minor7th */
+.A_sharp_minor #f_minor7th .ckeys_module, /* E# minor7th */ 
+.A_sharp_minor #fg_major7th .ckeys_module, /* F# major7th */
+.A_sharp_minor #ga_dominant7th .ckeys_module /* G# dominant7th */ {
+    background-color: lightslategray;
+}
+
+.B_flat_minor #ab_minor .ckeys_module, /* Bb minor */
+.B_flat_minor #c_diminished .ckeys_module, /* C diminished*/
+.B_flat_minor #cd_major .ckeys_module, /* Db major */
+.B_flat_minor #de_minor .ckeys_module, /* Eb minor */
+.B_flat_minor #f_minor .ckeys_module, /* F minor */
+.B_flat_minor #fg_major .ckeys_module, /* Gb major */
+.B_flat_minor #ga_major .ckeys_module, /* Ab major */
+
+.B_flat_minor #ab_minor7th .ckeys_module, /* Bb minor7th */
+.B_flat_minor #c_minor7thflat5 .ckeys_module, /* C# minor7thflat5 */
+.B_flat_minor #cd_major7th .ckeys_module, /* Db major7th */
+.B_flat_minor #de_minor7th .ckeys_module, /* Eb minor7th */
+.B_flat_minor #f_minor7th .ckeys_module, /* F minor7th */
+.B_flat_minor #fg_major7th .ckeys_module, /* Gb major7th */
+.B_flat_minor #ga_dominant7th .ckeys_module /* Ab dominant7th */ {
+    background-color: lightslategray;
+}
+
+.B_minor #b_minor .ckeys_module, /* B minor */
+.B_minor #cd_diminished .ckeys_module, /* C# diminished*/
+.B_minor #d_major .ckeys_module, /* D major */
+.B_minor #e_minor .ckeys_module, /* E minor */
+.B_minor #fg_minor .ckeys_module, /* F# minor */
+.B_minor #g_major .ckeys_module, /* G major */
+.B_minor #a_major .ckeys_module, /* A major */
+
+.B_minor #b_minor7th .ckeys_module, /* B minor7th */
+.B_minor #cd_minor7thflat5 .ckeys_module, /* C# minor7thflat5 */
+.B_minor #d_major7th .ckeys_module, /* D major7th */
+.B_minor #e_minor7th .ckeys_module, /* E minor7th */
+.B_minor #fg_minor7th .ckeys_module, /* F# minor7th */
+.B_minor #g_major7th .ckeys_module, /* G major7th */
+.B_minor #a_dominant7th .ckeys_module /* A dominant7th */ {
+    background-color: lightslategray;
+}
+
+
+/* black keye are absolute positioned in their own div */
+.ckeys_module .k1_cd {
+    left: 4.5%;
+}
+
+.ckeys_module .k1_de {
+    left: 12%;
+}
+
+.ckeys_module .k1_fg {
+    left: 26%;
+}
+
+.ckeys_module .k1_ga {
+    left: 33%;
+}
+
+.ckeys_module .k1_ab {
+    left: 40.5%;
+}
+
+.ckeys_module .k2_cd {
+    left: 54.5%;
+}
+
+.ckeys_module .k2_de {
+    left: 62%;
+}
+
+.ckeys_module .k2_fg {
+    left: 76%;
+}
+
+.ckeys_module .k2_ga {
+    left: 83.5%;
+}
+
+.ckeys_module .k2_ab {
+    left: 90.5%;
+}

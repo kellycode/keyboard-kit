@@ -1,0 +1,571 @@
+
+
+/* PIANO-MODULE.CSS DEPLOY_ADD */
+
+.piano-module {
+    width: 100%;
+    height: 300px;
+    padding: 0px 20px 00px 20px;
+    /*    background-image: linear-gradient(to bottom, darkred 1%, white 3.5%, darkred 6%, black 8%, darkred 97.5%, white 100%);*/
+}
+
+/* keyboard itself */
+.piano-module .piano {
+    width: 100%;
+    height: 220px;
+    padding: 0px;
+}
+
+.piano-module .metal_border {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 4px;
+    background: rgba(76,76,76,1);
+    background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
+    background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -o-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: linear-gradient(to bottom, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+}
+
+/* push first key a little to center keyboard */
+.piano-module .piano div:first-child {
+    margin-left: 0.09%;
+}
+
+.piano-module .white-key, .piano-module .black-key {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    filter: brightness(1);
+    cursor: pointer;
+}
+
+.piano-module .white-key {
+    background-color: white;
+    width: 1.92%;
+    height: 100%;
+    z-index: 1;
+    border-radius:0 0 5px 5px;
+    box-shadow: 0 -2px 2px 2px rgba(0,0,0,0.3) inset;
+}
+
+.piano-module .white-key.unused {
+    background-color: lightgray;
+}
+
+.piano-module .white-key:hover {
+    /*    background: linear-gradient(45deg, #ddd 0%, #ccc 100%)*/
+    background-color: #ddd;
+}
+
+.piano-module .white-key.unused:active,
+.piano-module .white-key:active,
+.piano-module .white-key.midi-picked {
+    /*    background-color: #070;*/
+    background-color: #94ce94;
+}
+
+.piano-module .black-key {
+    background-color: black;
+    width: 1%;
+    height: 63%;
+    margin-right: -0.5%;
+    z-index: 2;
+    border-radius:0 0 3px 3px;
+    box-shadow: 0 -5px 2px 3px rgba(0,0,0,0.6) inset;
+    background: linear-gradient(45deg,#222 0%,#555 100%)
+}
+
+.piano-module .black-key:hover {
+    background: linear-gradient(45deg,#666 0%,#999 100%)
+}
+
+.piano-module .black-key:active, .black-key.midi-picked {
+    background: linear-gradient(45deg,#94ce94 0%,#0c0 100%);
+}
+
+/* white key relative offset to accomdate the black key offset on it's right' */
+.piano-module .shift {
+    margin-right: -0.5%;
+}
+
+.piano-module #key_buttons {
+    width: 100%;
+    height: 52px;
+}
+
+.piano-module #key_buttons .col {
+    text-align: center;
+    border-radius: 6px;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+.piano-module #key_buttons .row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.piano-module #key_buttons .row .btn {
+    /* overwrite bootstrap*/
+    height: 26px;
+    flex-basis: 0;
+    padding: 0px 1px 0px 0px;
+    margin-bottom: 0px;
+}
+
+.piano-module #key_buttons .row {
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+}
+
+.piano-module #key_buttons .key_status{
+    position: absolute;
+    right: 0px;
+    top: 3px;
+    height: 18px;
+    width: 20px;
+    background-color: dodgerblue;
+    border-radius: 6px;
+    margin-right: 3px;
+}
+
+.piano-module .scale_btm {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: #3498DB;
+    box-sizing: initial;
+    visibility: hidden;
+    border: 3px solid #3498DB;
+}
+
+/*
+The key class is added to the piano module to display the inidicators for which
+keys belong to the current key and also the key root note
+*/
+.piano.C_major .ckey,
+.piano.C_major .dkey,
+.piano.C_major .ekey,
+.piano.C_major .fkey,
+.piano.C_major .gkey,
+.piano.C_major .akey,
+.piano.C_major .bkey {
+    visibility: visible;
+}
+.piano.C_major .ckey {
+    border: 3px solid #fc6605;
+}
+
+.piano.C_sharp_major .cdkey,
+.piano.C_sharp_major .dekey,
+.piano.C_sharp_major .fkey,
+.piano.C_sharp_major .fgkey,
+.piano.C_sharp_major .gakey,
+.piano.C_sharp_major .abkey,
+.piano.C_sharp_major .ckey {
+    visibility: visible;
+}
+.piano.C_sharp_major .cdkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.D_flat_major .cdkey,
+.piano.D_flat_major .dekey,
+.piano.D_flat_major .fkey,
+.piano.D_flat_major .fgkey,
+.piano.D_flat_major .gakey,
+.piano.D_flat_major .abkey,
+.piano.D_flat_major .ckey {
+    visibility: visible;
+}
+.piano.D_flat_major .cdkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.D_major .dkey,
+.piano.D_major .ekey,
+.piano.D_major .fgkey,
+.piano.D_major .gkey,
+.piano.D_major .akey,
+.piano.D_major .bkey,
+.piano.D_major .cdkey {
+    visibility: visible;
+}
+.piano.D_major .dkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.D_sharp_major .dekey,
+.piano.D_sharp_major .fkey,
+.piano.D_sharp_major .gkey,
+.piano.D_sharp_major .gakey,
+.piano.D_sharp_major .abkey,
+.piano.D_sharp_major .ckey,
+.piano.D_sharp_major .dkey {
+    visibility: visible;
+}
+.piano.D_sharp_major .dekey {
+    border: 3px solid #fc6605;
+}
+
+.piano.E_flat_major .dekey,
+.piano.E_flat_major .fkey,
+.piano.E_flat_major .gkey,
+.piano.E_flat_major .gakey,
+.piano.E_flat_major .abkey,
+.piano.E_flat_major .ckey,
+.piano.E_flat_major .dkey {
+    visibility: visible;
+}
+.piano.E_flat_major .dekey {
+    border: 3px solid #fc6605;
+}
+
+.piano.E_major .ekey,
+.piano.E_major .fgkey,
+.piano.E_major .gakey,
+.piano.E_major .akey,
+.piano.E_major .bkey,
+.piano.E_major .cdkey,
+.piano.E_major .dekey {
+    visibility: visible;
+}
+.piano.E_major .ekey {
+    border: 3px solid #fc6605;
+}
+
+.piano.F_major .fkey,
+.piano.F_major .gkey,
+.piano.F_major .akey,
+.piano.F_major .abkey,
+.piano.F_major .ckey,
+.piano.F_major .dkey,
+.piano.F_major .ekey {
+    visibility: visible;
+}
+.piano.F_major .fkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.F_sharp_major .fgkey,
+.piano.F_sharp_major .gakey,
+.piano.F_sharp_major .abkey,
+.piano.F_sharp_major .bkey,
+.piano.F_sharp_major .cdkey,
+.piano.F_sharp_major .dekey,
+.piano.F_sharp_major .fkey {
+    visibility: visible;
+}
+.piano.F_sharp_major .fgkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.G_flat_major .fgkey,
+.piano.G_flat_major .gakey,
+.piano.G_flat_major .abkey,
+.piano.G_flat_major .bkey,
+.piano.G_flat_major .cdkey,
+.piano.G_flat_major .dekey,
+.piano.G_flat_major .fkey {
+    visibility: visible;
+}
+.piano.G_flat_major .fgkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.G_major .gkey,
+.piano.G_major .akey,
+.piano.G_major .bkey,
+.piano.G_major .ckey,
+.piano.G_major .dkey,
+.piano.G_major .ekey,
+.piano.G_major .fgkey {
+    visibility: visible;
+}
+.piano.G_major .gkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.G_sharp_major .gakey,
+.piano.G_sharp_major .abkey,
+.piano.G_sharp_major .ckey,
+.piano.G_sharp_major .cdkey,
+.piano.G_sharp_major .dekey,
+.piano.G_sharp_major .fkey,
+.piano.G_sharp_major .gkey {
+    visibility: visible;
+}
+.piano.G_sharp_major .gakey {
+    border: 3px solid #fc6605;
+}
+
+.piano.A_flat_major .gakey,
+.piano.A_flat_major .abkey,
+.piano.A_flat_major .ckey,
+.piano.A_flat_major .cdkey,
+.piano.A_flat_major .dekey,
+.piano.A_flat_major .fkey,
+.piano.A_flat_major .gkey {
+    visibility: visible;
+}
+.piano.A_flat_major .gakey {
+    border: 3px solid #fc6605;
+}
+
+.piano.A_major .akey,
+.piano.A_major .bkey,
+.piano.A_major .cdkey,
+.piano.A_major .dkey,
+.piano.A_major .ekey,
+.piano.A_major .fgkey,
+.piano.A_major .gakey {
+    visibility: visible;
+}
+.piano.A_major .akey {
+    border: 3px solid #fc6605;
+}
+
+.piano.A_sharp_major .abkey,
+.piano.A_sharp_major .ckey,
+.piano.A_sharp_major .dkey,
+.piano.A_sharp_major .dekey,
+.piano.A_sharp_major .fkey,
+.piano.A_sharp_major .gkey,
+.piano.A_sharp_major .akey {
+    visibility: visible;
+}
+.piano.A_sharp_major .abkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.B_flat_major .abkey,
+.piano.B_flat_major .ckey,
+.piano.B_flat_major .dkey,
+.piano.B_flat_major .dekey,
+.piano.B_flat_major .fkey,
+.piano.B_flat_major .gkey,
+.piano.B_flat_major .akey {
+    visibility: visible;
+}
+.piano.B_flat_major .abkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.B_major .bkey,
+.piano.B_major .cdkey,
+.piano.B_major .dekey,
+.piano.B_major .ekey,
+.piano.B_major .fgkey,
+.piano.B_major .gakey,
+.piano.B_major .abkey {
+    visibility: visible;
+}
+.piano.B_major .bkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.C_minor .ckey,
+.piano.C_minor .dkey,
+.piano.C_minor .dekey,
+.piano.C_minor .fkey,
+.piano.C_minor .gkey,
+.piano.C_minor .gakey,
+.piano.C_minor .abkey {
+    visibility: visible;
+}
+.piano.C_minor .ckey {
+    border: 3px solid #fc6605;
+}
+
+.piano.C_sharp_minor .cdkey,
+.piano.C_sharp_minor .dekey,
+.piano.C_sharp_minor .ekey,
+.piano.C_sharp_minor .fgkey,
+.piano.C_sharp_minor .gakey,
+.piano.C_sharp_minor .akey,
+.piano.C_sharp_minor .bkey {
+    visibility: visible;
+}
+.piano.C_sharp_minor .cdkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.D_minor .dkey,
+.piano.D_minor .ekey,
+.piano.D_minor .fkey,
+.piano.D_minor .gkey,
+.piano.D_minor .akey,
+.piano.D_minor .abkey,
+.piano.D_minor .ckey {
+    visibility: visible;
+}
+.piano.D_minor .dkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.D_sharp_minor .dekey,
+.piano.D_sharp_minor .fkey,
+.piano.D_sharp_minor .fgkey,
+.piano.D_sharp_minor .gakey,
+.piano.D_sharp_minor .abkey,
+.piano.D_sharp_minor .bkey,
+.piano.D_sharp_minor .cdkey {
+    visibility: visible;
+}
+.piano.D_sharp_minor .dekey {
+    border: 3px solid #fc6605;
+}
+
+.piano.E_flat_minor .dekey,
+.piano.E_flat_minor .fkey,
+.piano.E_flat_minor .fgkey,
+.piano.E_flat_minor .gakey,
+.piano.E_flat_minor .abkey,
+.piano.E_flat_minor .bkey,
+.piano.E_flat_minor .cdkey {
+    visibility: visible;
+}
+.piano.E_flat_minor .dekey {
+    border: 3px solid #fc6605;
+}
+
+.piano.E_minor .ekey,
+.piano.E_minor .fgkey,
+.piano.E_minor .gkey,
+.piano.E_minor .akey,
+.piano.E_minor .bkey,
+.piano.E_minor .ckey,
+.piano.E_minor .dkey {
+    visibility: visible;
+}
+.piano.E_minor .ekey {
+    border: 3px solid #fc6605;
+}
+
+.piano.F_minor .fkey,
+.piano.F_minor .gkey,
+.piano.F_minor .gakey,
+.piano.F_minor .abkey,
+.piano.F_minor .ckey,
+.piano.F_minor .cdkey,
+.piano.F_minor .dekey {
+    visibility: visible;
+}
+.piano.F_minor .fkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.F_sharp_minor .fgkey,
+.piano.F_sharp_minor .gakey,
+.piano.F_sharp_minor .akey,
+.piano.F_sharp_minor .bkey,
+.piano.F_sharp_minor .cdkey,
+.piano.F_sharp_minor .dkey,
+.piano.F_sharp_minor .ekey {
+    visibility: visible;
+}
+.piano.F_sharp_minor .fgkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.G_minor .gkey,
+.piano.G_minor .akey,
+.piano.G_minor .abkey,
+.piano.G_minor .ckey,
+.piano.G_minor .dkey,
+.piano.G_minor .dekey,
+.piano.G_minor .fkey {
+    visibility: visible;
+}
+.piano.G_minor .gkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.G_sharp_minor .gakey,
+.piano.G_sharp_minor .abkey,
+.piano.G_sharp_minor .bkey,
+.piano.G_sharp_minor .cdkey,
+.piano.G_sharp_minor .dekey,
+.piano.G_sharp_minor .ekey,
+.piano.G_sharp_minor .fgkey {
+    visibility: visible;
+}
+.piano.G_sharp_minor .gakey {
+    border: 3px solid #fc6605;
+}
+
+.piano.A_flat_minor .gakey,
+.piano.A_flat_minor .abkey,
+.piano.A_flat_minor .bkey,
+.piano.A_flat_minor .cdkey,
+.piano.A_flat_minor .dekey,
+.piano.A_flat_minor .ekey,
+.piano.A_flat_minor .fgkey {
+    visibility: visible;
+}
+.piano.A_flat_minor .gakey {
+    border: 3px solid #fc6605;
+}
+
+.piano.A_minor .akey,
+.piano.A_minor .bkey,
+.piano.A_minor .ckey,
+.piano.A_minor .dkey,
+.piano.A_minor .ekey,
+.piano.A_minor .fkey,
+.piano.A_minor .gkey {
+    visibility: visible;
+}
+.piano.A_minor .akey {
+    border: 3px solid #fc6605;
+}
+
+.piano.A_sharp_minor .abkey,
+.piano.A_sharp_minor .ckey,
+.piano.A_sharp_minor .cdkey,
+.piano.A_sharp_minor .dekey,
+.piano.A_sharp_minor .fkey,
+.piano.A_sharp_minor .fgkey,
+.piano.A_sharp_minor .gakey {
+    visibility: visible;
+}
+.piano.A_sharp_minor .abkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.B_flat_minor .abkey,
+.piano.B_flat_minor .ckey,
+.piano.B_flat_minor .cdkey,
+.piano.B_flat_minor .dekey,
+.piano.B_flat_minor .fkey,
+.piano.B_flat_minor .fgkey,
+.piano.B_flat_minor .gakey {
+    visibility: visible;
+}
+.piano.B_flat_minor .abkey {
+    border: 3px solid #fc6605;
+}
+
+.piano.B_minor .bkey,
+.piano.B_minor .cdkey,
+.piano.B_minor .dkey,
+.piano.B_minor .ekey,
+.piano.B_minor .fgkey,
+.piano.B_minor .gkey,
+.piano.B_minor .akey {
+    visibility: visible;
+}
+.piano.B_minor .bkey {
+    border: 3px solid #fc6605;
+}
+

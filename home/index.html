@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="KeyboardKit.App">
+    <head>
+        <title>Keyboard Kit</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="Author" content="KellyCode">
+
+        <link rel="icon" href="./favicon.ico?v=1" type="image/x-icon" />
+
+        <!-- GOOGLE CURVY FONT -->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+        <!-- CORE CSS -->
+        <link href="css/bootstrap_4.4.1_darkly/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- OUR CSS -->
+        <link href="css/keyboardkit.css" rel="stylesheet" type="text/css"/>
+
+        <!-- MODULE CSS -->
+        <link href="page_modules/chords-module.css" rel="stylesheet" type="text/css"/>
+        <link href="page_modules/ckeys-module.css" rel="stylesheet" type="text/css"/>
+        <link href="page_modules/piano-module.css" rel="stylesheet" type="text/css"/>
+        <link href="page_modules/score-module.css" rel="stylesheet" type="text/css"/>
+        <link href="page_modules/staff-module.css" rel="stylesheet" type="text/css"/>
+        <link href="page_modules/header-module.css" rel="stylesheet" type="text/css"/>
+
+        <!-- CORE EXT LIBS -->
+        <script src="ext/angular/angular-1.7.9/angular.min.js" type="text/javascript"></script>
+        <script src="ext/angular/angular-1.7.9/angular-animate.min.js" type="text/javascript"></script>
+        <script src="ext/angular/angular-1.7.9/angular-sanitize.min.js" type="text/javascript"></script>
+        <script src="ext/angular/angular-1.7.9/angular-cookies.min.js" type="text/javascript"></script>
+
+        <!-- EXT LIBS -->
+        <script src="ext/ui-bootstrap-custom-build/ui-bootstrap-custom-tpls-2.5.0.min.js" type="text/javascript"></script>
+        <script src="ext/ui-bootstrap-custom-build/ui-bootstrap-custom-2.5.0.min.js" type="text/javascript"></script>
+
+        <!-- OUR MODULES -->
+        <script src="js/Module.KeyboardKit.NoteMethods.js" type="text/javascript"></script>
+        <script src="js/Module.KeyboardKit.Directives.js" type="text/javascript"></script>
+        <script src="js/Module.KeyboardKit.NoteData.js" type="text/javascript"></script>
+        <script src="js/Module.KeyboardKit.Main.js" type="text/javascript"></script>
+
+        <!-- OUR APP -->
+        <script src="./js/Module.KeyboardKit.App.js" type="text/javascript"></script>
+
+
+    </head>
+    <body data-event-watcher ng-class="orientation">
+
+        <!-- MAIN PAGE VIEW -->
+        <div data-keyboard-kit></div>
+
+        <div id="modal_parent" class="d-none" ng-controller="ModalController">
+            <div id="modal_body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <section class="animate-repeat" ng-repeat="subject in subjects">
+                            <h5>{{subject.title}}</h5>
+                            <p>{{subject.description}}</p>
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

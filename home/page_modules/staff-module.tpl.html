@@ -1,0 +1,94 @@
+<div id="staff_module">
+    
+    <img class="gClefImg" src="img/treble_clef_T.png" alt="treble clef"/>
+    <img class="fClefImg" src="img/bass_clef_T.png" alt="bass clef"/>
+
+    <div class="note_box" ng-show="keepScore" ng-click="objLit.showHint = !objLit.showHint;" ng-style="{'top': currentMemNote.top + '%'}">
+        <div class="note">
+            <span ng-show="objLit.showHint" ng-bind-html="currentMemNote.noteString">
+                <!--                <sup ng-show="keyNotes[currentMemNote.onote] === 's'">&sharp;</sup>-->
+                <!--                <sup ng-show="keyNotes[currentMemNote.onote] === 'f'">&flat;</sup>-->
+            </span>
+        </div>
+    </div>
+
+    <div id="key_sigs">
+        <img id="ks_ta" ng-if="keyNotes.ks_ta" class="key_sig sharp" src="img/sharp.png" alt="A"/>
+        <img id="ks_ba" ng-if="keyNotes.ks_ba" class="key_sig sharp" src="img/sharp.png" alt="A"/>
+        <img id="ks_tb" ng-if="keyNotes.ks_tb" class="key_sig sharp" src="img/sharp.png" alt="B"/>
+        <img id="ks_bb" ng-if="keyNotes.ks_bb" class="key_sig sharp" src="img/sharp.png" alt="B"/>
+        <img id="ks_tc" ng-if="keyNotes.ks_tc" class="key_sig sharp" src="img/sharp.png" alt="C"/>
+        <img id="ks_bc" ng-if="keyNotes.ks_bc" class="key_sig sharp" src="img/sharp.png" alt="C"/>
+        <img id="ks_td" ng-if="keyNotes.ks_td" class="key_sig sharp" src="img/sharp.png" alt="D"/>
+        <img id="ks_bd" ng-if="keyNotes.ks_bd" class="key_sig sharp" src="img/sharp.png" alt="D"/>
+        <img id="ks_te" ng-if="keyNotes.ks_te" class="key_sig sharp" src="img/sharp.png" alt="E"/>
+        <img id="ks_be" ng-if="keyNotes.ks_be" class="key_sig sharp" src="img/sharp.png" alt="E"/>
+        <img id="ks_tf" ng-if="keyNotes.ks_tf" class="key_sig sharp" src="img/sharp.png" alt="F"/>
+        <img id="ks_bf" ng-if="keyNotes.ks_bf" class="key_sig sharp" src="img/sharp.png" alt="F"/>
+        <img id="ks_tg" ng-if="keyNotes.ks_tg" class="key_sig sharp" src="img/sharp.png" alt="G"/>
+        <img id="ks_bg" ng-if="keyNotes.ks_bg" class="key_sig sharp" src="img/sharp.png" alt="G"/>
+
+        <img id="kf_ta" ng-if="keyNotes.kf_ta" class="key_sig flat" src="img/flat.png" alt="A"/>
+        <img id="kf_ba" ng-if="keyNotes.kf_ba" class="key_sig flat" src="img/flat.png" alt="A"/>
+        <img id="kf_tb" ng-if="keyNotes.kf_tb" class="key_sig flat" src="img/flat.png" alt="B"/>
+        <img id="kf_bb" ng-if="keyNotes.kf_bb" class="key_sig flat" src="img/flat.png" alt="B"/>
+        <img id="kf_tc" ng-if="keyNotes.kf_tc" class="key_sig flat" src="img/flat.png" alt="C"/>
+        <img id="kf_bc" ng-if="keyNotes.kf_bc" class="key_sig flat" src="img/flat.png" alt="C"/>
+        <img id="kf_td" ng-if="keyNotes.kf_td" class="key_sig flat" src="img/flat.png" alt="D"/>
+        <img id="kf_bd" ng-if="keyNotes.kf_bd" class="key_sig flat" src="img/flat.png" alt="D"/>
+        <img id="kf_te" ng-if="keyNotes.kf_te" class="key_sig flat" src="img/flat.png" alt="E"/>
+        <img id="kf_be" ng-if="keyNotes.kf_be" class="key_sig flat" src="img/flat.png" alt="E"/>
+        <img id="kf_tf" ng-if="keyNotes.kf_tf" class="key_sig flat" src="img/flat.png" alt="F"/>
+        <img id="kf_bf" ng-if="keyNotes.kf_bf" class="key_sig flat" src="img/flat.png" alt="F"/>
+        <img id="kf_tg" ng-if="keyNotes.kf_tg" class="key_sig flat" src="img/flat.png" alt="G"/>
+        <img id="kf_bg" ng-if="keyNotes.kf_bg" class="key_sig flat" src="img/flat.png" alt="G"/>
+    </div>
+
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">f</span></div>
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">d</span></div>
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">b</span></div>
+
+    <div class="ledger_line bottom_border wide"><span class="line_hint" ng-if="showLineNames">g</span></div>
+    <div class="ledger_line bottom_border side_borders"><span class="line_hint" ng-if="showLineNames">e</span></div>
+    <div class="ledger_line bottom_border side_borders"><span class="line_hint" ng-if="showLineNames">c</span></div>
+    <div class="ledger_line bottom_border side_borders"><span class="line_hint" ng-if="showLineNames">a</span></div>
+    <div class="ledger_line bottom_border side_borders"><span class="line_hint" ng-if="showLineNames">f</span></div>
+
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">d</span></div>
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">b</span></div>
+    <div class="ledger_line wide"><span class="line_hint" ng-if="showLineNames">g</span></div>
+    <div class="ledger_line wide"></div>
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">f</span></div>
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">d</span></div>
+
+    <div class="ledger_line bottom_border wide"><span class="line_hint" ng-if="showLineNames">b</span></div>
+    <div class="ledger_line bottom_border side_borders"><span class="line_hint" ng-if="showLineNames">g</span></div>
+    <div class="ledger_line bottom_border side_borders"><span class="line_hint" ng-if="showLineNames">e</span></div>
+    <div class="ledger_line bottom_border side_borders"><span class="line_hint" ng-if="showLineNames">c</span></div>
+    <div class="ledger_line bottom_border side_borders"><span class="line_hint" ng-if="showLineNames">a</span></div>
+
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">f</span></div>
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">d</span></div>
+    <div class="ledger_line bottom_lite wide"><span class="line_hint" ng-if="showLineNames">b</span></div>
+    <div class="ledger_line wide"><span class="line_hint" ng-if="showLineNames">g</span></div>
+
+    <div class="row">
+        <div class="form-check form-check-inline col">
+            <input type="checkbox" class="form-check-input" ng-model="keepScore" id="keepScoreCheckbox">
+            <label class="form-check-label" for="keepScoreCheckbox">Keep Score</label>
+        </div>
+        <div class="form-check form-check-inline col">
+            <input type="checkbox" class="form-check-input" ng-model="breakOnMiddleC" id="breakOnMiddleCCheckbox">
+            <label class="form-check-label" for="breakOnMiddleCCheckbox">Break on Middle C</label>
+        </div>
+        <div class="form-check form-check-inline col">
+            <input type="checkbox" class="form-check-input" ng-model="showLineNames" id="showLineNamesCheckbox">
+            <label class="form-check-label" for="showLineNamesCheckbox">Show Line Names</label>
+        </div>
+        <div class="form-check form-check-inline col">
+            <input type="checkbox" class="form-check-input" ng-model="useKeySearch" id="keySearchCheckbox">
+            <label class="form-check-label" for="keySearchCheckbox">Key Search</label>
+        </div>
+    </div>
+
+</div>

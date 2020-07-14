@@ -1,0 +1,363 @@
+
+/* CHORDS-MODULE.CSS DEPLOY_ADD */
+
+.chords_module {
+    height: 100%;
+    border: 1px ridge #777;
+    border-radius: 6px;
+    margin: 0px; 
+}
+
+.chords_module .chord_mod.alive {
+    background-color: #ffff00;
+}
+
+.chords_module .key_col {
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chords_module .key_col > div {
+    height: 7.6923%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    border: 1px solid #777;
+}
+
+
+/*
+yellow: #f7d842
+purple: #913ccd
+coral:  #f15f74
+orange: #f99273
+aqua:   #2ca8c2
+lime:   #98cb4a
+lilac   #976fa7
+
+fuchsia     #FF00FF
+teal        #008080
+dp orange   #FF7F00
+azure       #007FFF
+brt green   #66FF00
+cad yellow  #FFF600
+cerise      #DE3163
+*/
+
+/* What keys are colored as active for a particular chord module and key */
+
+/* C */
+#c_major .k1_c, #c_major .k1_e , #c_major .k1_g  {
+    background-color: #f7d842;
+}
+#c_minor .k1_c, #c_minor .k1_de, #c_minor .k1_g  {
+    background-color: #f15f74;
+}
+#c_minor7th .k1_c, #c_minor7th .k1_de, #c_minor7th .k1_g, #c_minor7th .k1_ab  {
+    background-color: #976fa7;
+}
+#c_diminished .k1_c,  #c_diminished .k1_de, #c_diminished .k1_fg {
+    background-color: #f99273;
+}
+#c_dominant7th .k1_c, #c_dominant7th .k1_e, #c_dominant7th .k1_g, #c_dominant7th .k1_ab {
+    background-color: #2ca8c2;
+}
+#c_major7th .k1_c, #c_major7th .k1_e, #c_major7th .k1_g, #c_major7th .k1_b {
+    background-color: #98cb4a;
+}
+#c_augmented .k1_c, #c_augmented .k1_e , #c_augmented .k1_ga  {
+    background-color: #00FFFF;
+}
+#c_minor7thflat5 .k1_c,  #c_minor7thflat5 .k1_de, #c_minor7thflat5 .k1_fg, #c_minor7thflat5 .k1_ab {
+    background-color: #913ccd;
+}
+
+/* D */
+#d_major .k1_d, #d_major .k1_fg, #d_major .k1_a {
+    background-color: #f7d842;
+}
+#d_minor .k1_d, #d_minor .k1_f, #d_minor .k1_a {
+    background-color: #f15f74;
+}
+#d_minor7th .k1_d, #d_minor7th .k1_f, #d_minor7th .k1_a, #d_minor7th .k2_c {
+    background-color: #976fa7;
+}
+#d_diminished .k1_d, #d_diminished .k1_f, #d_diminished .k1_ga {
+    background-color: #f99273;
+}
+#d_dominant7th .k1_d, #d_dominant7th .k1_fg, #d_dominant7th .k1_a, #d_dominant7th .k2_c {
+    background-color: #2ca8c2;
+}
+#d_major7th .k1_d, #d_major7th .k1_fg, #d_major7th .k1_a, #d_major7th .k2_cd {
+    background-color: #98cb4a;
+}
+#d_augmented .k1_d, #d_augmented .k1_fg, #d_augmented .k1_ab {
+    background-color: #00FFFF;
+}
+#d_minor7thflat5 .k1_d, #d_minor7thflat5 .k1_f, #d_minor7thflat5 .k1_ga, #d_minor7thflat5 .k2_c {
+    background-color: #913ccd;
+}
+
+/* E */
+#e_major .k1_e, #e_major .k1_ga, #e_major .k1_b {
+    background-color: #f7d842;
+}
+#e_minor .k1_e, #e_minor .k1_g, #e_minor .k1_b {
+    background-color: #f15f74;
+}
+#e_minor7th .k1_e, #e_minor7th .k1_g, #e_minor7th .k1_b, #e_minor7th .k2_d {
+    background-color: #976fa7;
+}
+#e_diminished .k1_e, #e_diminished .k1_g, #e_diminished .k1_ab {
+    background-color: #f99273;
+}
+#e_dominant7th .k1_e, #e_dominant7th .k1_ga, #e_dominant7th .k1_b, #e_dominant7th .k2_d {
+    background-color: #2ca8c2;
+}
+#e_major7th .k1_e, #e_major7th .k1_ga, #e_major7th .k1_b, #e_major7th .k2_de {
+    background-color: #98cb4a;
+}
+#e_augmented .k1_e, #e_augmented .k1_ga, #e_augmented .k2_c {
+    background-color: #00FFFF;
+}
+#e_minor7thflat5 .k1_e, #e_minor7thflat5 .k1_g, #e_minor7thflat5 .k1_ab, #e_minor7thflat5 .k2_d {
+    background-color: #913ccd;
+}
+
+/* F */
+#f_major .k1_f, #f_major .k1_a, #f_major .k2_c {
+    background-color: #f7d842;
+}
+#f_minor .k1_f, #f_minor .k1_ga, #f_minor .k2_c {
+    background-color: #f15f74;
+}
+#f_minor7th .k1_f, #f_minor7th .k1_ga, #f_minor7th .k2_c, #f_minor7th .k2_de {
+    background-color: #976fa7;
+}
+#f_diminished .k1_f, #f_diminished .k1_ga, #f_diminished .k1_b {
+    background-color: #f99273;
+}
+#f_dominant7th .k1_f, #f_dominant7th .k1_a, #f_dominant7th .k2_c, #f_dominant7th .k2_de {
+    background-color: #2ca8c2;
+}
+#f_major7th .k1_f, #f_major7th .k1_a, #f_major7th .k2_c, #f_major7th .k2_e {
+    background-color: #98cb4a;
+}
+#f_augmented .k1_f, #f_augmented .k1_a, #f_augmented .k2_cd {
+    background-color: #00FFFF;
+}
+#f_minor7thflat5 .k1_f, #f_minor7thflat5 .k1_ga, #f_minor7thflat5 .k1_b, #f_minor7thflat5 .k2_de {
+    background-color: #913ccd;
+}
+
+/* G */
+#g_major .k1_g, #g_major .k1_b, #g_major .k2_d {
+    background-color: #f7d842;
+}
+#g_minor .k1_g, #g_minor .k1_ab, #g_minor .k2_d {
+    background-color: #f15f74;
+}
+#g_minor7th .k1_g, #g_minor7th .k1_ab, #g_minor7th .k2_d, #g_minor7th .k2_f {
+    background-color: #976fa7;
+}
+#g_diminished .k1_g, #g_diminished .k1_ab, #g_diminished .k2_cd {
+    background-color: #f99273;
+}
+#g_dominant7th .k1_g, #g_dominant7th .k1_b, #g_dominant7th .k2_d, #g_dominant7th .k2_f {
+    background-color: #2ca8c2;
+}
+#g_major7th .k1_g, #g_major7th .k1_b, #g_major7th .k2_d, #g_major7th .k2_fg {
+    background-color: #98cb4a;
+}
+#g_augmented .k1_g, #g_augmented .k1_b, #g_augmented .k2_de {
+    background-color: #00FFFF;
+}
+#g_minor7thflat5 .k1_g, #g_minor7thflat5 .k1_ab, #g_minor7thflat5 .k2_cd, #g_minor7thflat5 .k2_f {
+    background-color: #913ccd;
+}
+
+/* A */
+#a_major .k1_a, #a_major .k2_cd, #a_major .k2_e {
+    background-color: #f7d842;
+}
+#a_minor .k1_a, #a_minor .k2_c, #a_minor .k2_e {
+    background-color: #f15f74;
+}
+#a_minor7th .k1_a, #a_minor7th .k2_c, #a_minor7th .k2_e, #a_minor7th .k2_g {
+    background-color: #976fa7;
+}
+#a_diminished .k1_a, #a_diminished .k2_c, #a_diminished .k2_de {
+    background-color: #f99273;
+}
+#a_dominant7th .k1_a, #a_dominant7th .k2_cd, #a_dominant7th .k2_e, #a_dominant7th .k2_g {
+    background-color: #2ca8c2;
+}
+#a_major7th .k1_a, #a_major7th .k2_cd, #a_major7th .k2_e, #a_major7th .k2_ga {
+    background-color: #98cb4a;
+}
+#a_augmented .k1_a, #a_augmented .k2_cd, #a_augmented .k2_f {
+    background-color: #00FFFF;
+}
+#a_minor7thflat5 .k1_a, #a_minor7thflat5 .k2_c, #a_minor7thflat5 .k2_de, #a_minor7thflat5 .k2_g {
+    background-color: #913ccd;
+}
+
+/* B */
+#b_major .k1_b, #b_major .k2_de, #b_major .k2_fg {
+    background-color: #f7d842;
+}
+#b_minor .k1_b, #b_minor .k2_d, #b_minor .k2_fg {
+    background-color: #f15f74;
+}
+#b_minor7th .k1_b, #b_minor7th .k2_d, #b_minor7th .k2_fg, #b_minor7th .k2_a {
+    background-color: #976fa7;
+}
+#b_diminished .k1_b, #b_diminished .k2_d, #b_diminished .k2_f {
+    background-color: #f99273;
+}
+#b_dominant7th .k1_b, #b_dominant7th .k2_de, #b_dominant7th .k2_fg, #b_dominant7th .k2_a {
+    background-color: #2ca8c2;
+}
+#b_major7th .k1_b, #b_major7th .k2_de, #b_major7th .k2_fg, #b_major7th .k2_ab {
+    background-color: #98cb4a;
+}
+#b_augmented .k1_b, #b_augmented .k2_de, #b_augmented .k2_g {
+    background-color: #00FFFF;
+}
+#b_minor7thflat5 .k1_b, #b_minor7thflat5 .k2_d, #b_minor7thflat5 .k2_f, #b_minor7thflat5 .k2_a {
+    background-color: #913ccd;
+}
+
+/* C#/Db */
+#cd_major .k1_cd, #cd_major .k1_f, #cd_major .k1_ga {
+    background-color: #f7d842;
+}
+#cd_minor .k1_cd, #cd_minor .k1_e, #cd_minor .k1_ga {
+    background-color: #f15f74;
+}
+#cd_minor7th .k1_cd, #cd_minor7th .k1_e, #cd_minor7th .k1_ga, #cd_minor7th .k1_b {
+    background-color: #976fa7;
+}
+#cd_diminished .k1_cd, #cd_diminished .k1_e, #cd_diminished .k1_g {
+    background-color: #f99273;
+}
+#cd_dominant7th .k1_cd, #cd_dominant7th .k1_f, #cd_dominant7th .k1_ga, #cd_dominant7th .k1_b {
+    background-color: #2ca8c2;
+}
+#cd_major7th .k1_cd, #cd_major7th .k1_f, #cd_major7th .k1_ga, #cd_major7th .k2_c {
+    background-color: #98cb4a;
+}
+#cd_augmented .k1_cd, #cd_augmented .k1_f, #cd_augmented .k1_a {
+    background-color: #00FFFF;
+}
+#cd_minor7thflat5 .k1_cd, #cd_minor7thflat5 .k1_e, #cd_minor7thflat5 .k1_g, #cd_minor7thflat5 .k1_b {
+    background-color: #913ccd;
+}
+
+/* D#/Eb */
+#de_major .k1_de, #de_major .k1_g, #de_major .k1_ab {
+    background-color: #f7d842;
+}
+#de_minor .k1_de, #de_minor .k1_fg, #de_minor .k1_ab {
+    background-color: #f15f74;
+}
+#de_minor7th .k1_de, #de_minor7th .k1_fg, #de_minor7th .k1_ab, #de_minor7th .k2_cd {
+    background-color: #976fa7;
+}
+#de_diminished .k1_de, #de_diminished .k1_fg, #de_diminished .k1_a {
+    background-color: #f99273;
+}
+#de_dominant7th .k1_de, #de_dominant7th .k1_g, #de_dominant7th .k1_ab, #de_dominant7th .k2_cd {
+    background-color: #2ca8c2;
+}
+#de_major7th .k1_de, #de_major7th .k1_g, #de_major7th .k1_ab, #de_major7th .k2_d {
+    background-color: #98cb4a;
+}
+#de_augmented .k1_de, #de_augmented .k1_g, #de_augmented .k1_b {
+    background-color: #00FFFF;
+}
+#de_minor7thflat5 .k1_de, #de_minor7thflat5 .k1_fg, #de_minor7thflat5 .k1_a, #de_minor7thflat5 .k2_cd {
+    background-color: #913ccd;
+}
+
+/* F#/Gb */
+#fg_major .k1_fg, #fg_major .k1_ab, #fg_major .k2_cd {
+    background-color: #f7d842;
+}
+#fg_minor .k1_fg, #fg_minor .k1_a, #fg_minor .k2_cd {
+    background-color: #f15f74;
+}
+#fg_minor7th .k1_fg, #fg_minor7th .k1_a, #fg_minor7th .k2_cd, #fg_minor7th .k2_e {
+    background-color: #976fa7;
+}
+#fg_diminished .k1_fg, #fg_diminished .k1_a, #fg_diminished .k2_c {
+    background-color: #f99273;
+}
+#fg_dominant7th .k1_fg, #fg_dominant7th .k1_ab, #fg_dominant7th .k2_cd, #fg_dominant7th .k2_e {
+    background-color: #2ca8c2;
+}
+#fg_major7th .k1_fg, #fg_major7th .k1_ab, #fg_major7th .k2_cd, #fg_major7th .k2_f {
+    background-color: #98cb4a;
+}
+#fg_augmented .k1_fg, #fg_augmented .k1_ab, #fg_augmented .k2_d {
+    background-color: #00FFFF;
+}
+#fg_minor7thflat5 .k1_fg, #fg_minor7thflat5 .k1_a, #fg_minor7thflat5 .k2_c, #fg_minor7thflat5 .k2_e {
+    background-color: #913ccd;
+}
+
+/* G#/Ab */
+#ga_major .k1_ga, #ga_major .k2_c, #ga_major .k2_de {
+    background-color: #f7d842;
+}
+#ga_minor .k1_ga, #ga_minor .k1_b, #ga_minor .k2_de {
+    background-color: #f15f74;
+}
+#ga_minor7th .k1_ga, #ga_minor7th .k1_b, #ga_minor7th .k2_de, #ga_minor7th .k2_fg {
+    background-color: #976fa7;
+}
+#ga_diminished .k1_ga, #ga_diminished .k1_b, #ga_diminished .k2_d {
+    background-color: #f99273;
+}
+#ga_dominant7th .k1_ga, #ga_dominant7th .k2_c, #ga_dominant7th .k2_de, #ga_dominant7th .k2_fg {
+    background-color: #2ca8c2;
+}
+#ga_major7th .k1_ga, #ga_major7th .k2_c, #ga_major7th .k2_de, #ga_major7th .k2_g {
+    background-color: #98cb4a;
+}
+#ga_augmented .k1_ga, #ga_augmented .k2_c, #ga_augmented .k2_e {
+    background-color: #00FFFF;
+}
+#ga_minor7thflat5 .k1_ga, #ga_minor7thflat5 .k1_b, #ga_minor7thflat5 .k2_d, #ga_minor7thflat5 .k2_fg {
+    background-color: #913ccd;
+}
+
+/* A#/Bb */
+#ab_major .k1_ab, #ab_major .k2_d, #ab_major .k2_f {
+    background-color: #f7d842;
+}
+#ab_minor .k1_ab, #ab_minor .k2_cd, #ab_minor .k2_f {
+    background-color: #f15f74;
+}
+#ab_minor7th .k1_ab, #ab_minor7th .k2_cd, #ab_minor7th .k2_f, #ab_minor7th .k2_ga {
+    background-color: #976fa7;
+}
+#ab_diminished .k1_ab, #ab_diminished .k2_cd, #ab_diminished .k2_e {
+    background-color: #f99273;
+}
+#ab_dominant7th .k1_ab, #ab_dominant7th .k2_d, #ab_dominant7th .k2_f, #ab_dominant7th .k2_ga {
+    background-color: #2ca8c2;
+}
+#ab_major7th .k1_ab, #ab_major7th .k2_d, #ab_major7th .k2_f, #ab_major7th .k2_a {
+    background-color: #98cb4a;
+}
+#ab_augmented .k1_ab, #ab_augmented .k2_d, #ab_augmented .k2_fg {
+    background-color: #00FFFF;
+}
+#ab_minor7thflat5 .k1_ab, #ab_minor7thflat5 .k2_cd, #ab_minor7thflat5 .k2_e, #ab_minor7thflat5 .k2_ga {
+    background-color: #913ccd;
+}

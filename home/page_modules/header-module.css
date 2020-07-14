@@ -1,0 +1,73 @@
+
+
+/* HEADER-MODULE.CSS DEPLOY_ADD */
+
+#header_module {
+    height: 60px;
+    background: linear-gradient(#000,#222,#555,#222,#000);
+    margin: 10px 0px 20px 0px;
+    border-radius: 6px;
+}
+#header_module .col {
+    height: 100%;
+}
+#header_module .srSiteName {
+    font-size: 35px;
+    text-shadow: 1px 2px 4px rgba(154, 172, 214, 1);
+    color: #375a7f;
+    letter-spacing: 3px;
+}
+#header_module .midi-detect-mod {
+    height: 100%;
+
+}
+#header_module .midi-detect-mod h6 {
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 2px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#header_module .madeForChrome {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    color: #425ea4;
+}
+#header_module .madeForChrome img {
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 0 2px 2px rgba(154, 172, 214, 1);
+    border-radius: 50%;
+}
+#header_module .help_box {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+#header_module .help {
+    height: 100%;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50% 50%;
+    background: radial-gradient(circle at 10px 10px, #5cabff, #000);
+    color: white;
+    box-shadow: 1px 2px 4px #7b92c9;
+}
+#header_module .help:hover {
+    background-color: #1d2b50;
+    background: radial-gradient(circle at 10px 10px, #00c000, #000);
+    box-shadow: 1px 2px 4px #4ad549;
+}

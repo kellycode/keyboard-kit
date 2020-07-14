@@ -1,0 +1,28 @@
+{
+  "name": "keyboard-kit",
+  "version": "0.10.3",
+  "description": "keyboard kit",
+  "main": "home/index.html",
+  "dependencies": {
+    "gulp-terser": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0"
+  },
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "y"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "none",
+  "license": "ISC"
+}

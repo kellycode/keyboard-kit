@@ -1,2 +1,5 @@
 # keyboard-kit
-Keyboard educational tools using a midi piano connection in a web page interface.
+
+Uses a midi piano connection over a web page interface to use keyboard tools.
+
+An AngularJS(1) App
