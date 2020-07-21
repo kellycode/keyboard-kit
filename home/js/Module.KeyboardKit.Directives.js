@@ -31,17 +31,26 @@ angular.module('KeyboardKit.Directives', [])
             }])
         .controller('DialogController', ['$scope',
             function ($scope) {
+                $scope.modal_title = "Keyboard Kit";
                 $scope.subjects = [
                     {
-                        title: 'Keyboard Kit',
+                        title: 'Midi Enabled',
+                        description: 'Designed for use with a piano connected to a desktop PC. (Annoyingly, browsers only allow one midi connection at a time atm)'
+                    },
+                    {
+                        title: 'Sight Reading Practice',
                         description: 25
                     },
                     {
-                        title: 'Keyboard Kit',
+                        title: 'Common Chord Finder',
                         description: 25
                     },
                     {
-                        title: 'Keyboard Kit',
+                        title: 'Key Scales',
+                        description: 25
+                    },
+                    {
+                        title: 'Key Search',
                         description: 25
                     }
                 ];
