@@ -1,20 +1,18 @@
-<div class="container-fluid fill-height" ng-controller="RootController">
-    <div id="keybaordKit" class="row" ng-controller="KeyboardKitController">
-        <div class="keyboard-kit-view col-12">
 
-            <div data-header-module></div>
+<div id="keybaordKit" class="" ng-controller="KeyboardKitController">
 
-            <div class="sr_center row">
-                <div class="col-4">
-                     <div class="data_score_mod" data-score-module></div>
-                     <div class="data_staff_mod" data-staff-module></div>
-                </div>
-                <div class="col-8" data-chords-module></div>
-            </div>
+    <div data-header-module></div>
 
-            <div class="piano-mod row" data-piano-module data-handle-note-selection="handleClickedKeySelection()"></div>
-            
-            <span data-app-version></span>
+    <div class="sr_center row">
+        <div id="staffScore" class="">
+            <div class="data_score_mod" data-score-module></div>
+            <div class="data_staff_mod" data-staff-module></div>
         </div>
+        <div id="chordsMod" class="" data-chords-module></div>
     </div>
+
+    <div class="piano-mod row" data-piano-module data-handle-note-selection="handleClickedKeySelection()"></div>
+
+    <span data-app-version></span>
+
 </div>

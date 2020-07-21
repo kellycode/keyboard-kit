@@ -3,7 +3,6 @@
 /* HEADER-MODULE.CSS DEPLOY_ADD */
 
 #header_module {
-    height: 60px;
     background: linear-gradient(#000,#222,#555,#222,#000);
     margin: 10px 0px 20px 0px;
     border-radius: 6px;

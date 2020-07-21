@@ -15,65 +15,63 @@ body {
     min-height: 1080px;
     font-size: 16px;
     background-color: #000;
-}
-
-/*body.portrait {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-}*/
-
-.fill-height {
-    min-height: 100%;
-    height: 100%; 
+    padding: 20px 20px 20px 50px;
 }
 
 #keybaordKit {
+    position: relative;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
     height: 100%;
     padding: 20px;
+    display: flex;
+    flex-flow: column;
 }
 
-#keybaordKit .keyboard-kit-view {
-    position: relative;
-    border: 1px solid #BBB;
-    border-radius: 6px;
-    padding: 0px 20px 10px 20px;
-    height: 100%;
-}
-
-.keyboard-kit-view .data_score_mod {
-    height: 24px;
-}
-
-.keyboard-kit-view .data_staff_mod {
-    height: calc(100% - 24px);
-}
-
-.keyboard-kit-view .sr_center {
-    height: calc(100% - 90px - 300px);
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-.keyboard-kit-view .sr_center > div {
-    height: 100%;
+#keybaordKit #staffScore {
     padding: 0px 20px 20px 20px;
+    flex-grow: 2;
+    display: flex;
+    flex-flow: column;
 }
 
-.keyboard-kit-view .piano-mod {
-    height: 300px;
-    box-sizing: border-box;
+#keybaordKit .data_score_mod {
+    flex: 0 1 25px;
 }
 
-.keyboard-kit-view .srVersion {
+#keybaordKit .data_staff_mod {
+    flex: 1 1 auto;
+}
+
+#keybaordKit #header_module {
+    flex: 0 1 60px;
+}
+
+#keybaordKit .sr_center {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row;
+}
+
+#keybaordKit #chordsMod {
+    padding: 20px;
+    flex-grow: 6;
+}
+
+#keybaordKit .piano-mod {
+    flex: 0 1 300px;
+}
+
+#keybaordKit .srVersion {
     position: absolute;
     right: 10px;
     bottom: 4px;
     font-size: 10px;
 }
 
+/* MODAL INFO DIALOG */
+
+/* transparent blocker */
 #modal_parent {
     margin: 0px;
     position: fixed;
