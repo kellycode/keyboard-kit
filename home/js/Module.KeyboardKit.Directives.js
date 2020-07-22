@@ -34,24 +34,36 @@ angular.module('KeyboardKit.Directives', [])
                 $scope.modal_title = "Keyboard Kit";
                 $scope.subjects = [
                     {
-                        title: 'Midi Enabled',
-                        description: 'Designed for use with a piano connected to a desktop PC. (Annoyingly, browsers only allow one midi connection at a time atm)'
+                        title: 'Keyboard Kit',
+                        description: 'Keyboard Kit is designed to be an educational tool for use with a piano connected to a desktop PC. It makes no musical tones, you have a piano for that. ;-)'
                     },
                     {
                         title: 'Sight Reading Practice',
-                        description: 25
+                        description: 'When "Keep Score" activated, random notes will appear on the staff and a score is updated for correct notes selected on your piano.'
                     },
                     {
                         title: 'Common Chord Finder',
-                        description: 25
+                        description: 'When "Key Search" is activated, pressing five or more keys on your piano will identify keys those notes belong to.  Nice for finding keys while listening.'
                     },
                     {
-                        title: 'Key Scales',
-                        description: 25
+                        title: 'Common Chords For Keys',
+                        description: 'Selecting a Key using the button above the piano will identify the most common fourteen chords for that key.'
                     },
                     {
-                        title: 'Key Search',
-                        description: 25
+                        title: 'Break On Middle C',
+                        description: 'The staff will show which notes you\'re currently playing including the area where bass and treble keys overlap.  \"Break on Middle C\" will split those.'
+                    },
+                    {
+                        title: 'Midi Enabled',
+                        description: 'The top header bar will signal that a midi device has been detected (or disconnected).  Currently most major browsers support midi devices.'
+                    },
+                    {
+                        title: 'Scales',
+                        description: 'Selecting a Key using the button above the piano will identify the scale for that key with the starting note highlighted.'
+                    },
+                    {
+                        title: 'Show Line Names',
+                        description: 'When \Show Line Names\" is actived, it simply identifies the staff line names.'
                     }
                 ];
             }])

@@ -74,6 +74,7 @@ const allJsFiles = [
     'home/ext/angular/angular-1.7.9/angular-animate.min.js',
     'home/ext/angular/angular-1.7.9/angular-sanitize.min.js',
     'home/ext/angular/angular-1.7.9/angular-cookies.min.js',
+    'home/ext/jquery/jquery-3.5.1.min.js',
     'home/ext/ui-bootstrap-custom-build/ui-bootstrap-custom-tpls-2.5.0.min.js',
     'home/ext/ui-bootstrap-custom-build/ui-bootstrap-custom-2.5.0.min.js',
     'home/js/Module.KeyboardKit.Main.js', 
