@@ -4,7 +4,7 @@
 
 #header_module {
     background: linear-gradient(#000,#222,#555,#222,#000);
-    margin: 10px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
     border-radius: 6px;
 }
 #header_module .col {

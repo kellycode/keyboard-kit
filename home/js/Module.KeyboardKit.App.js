@@ -13,29 +13,24 @@ angular.module('KeyboardKit.App',
             'ngCookies',
             'ui.bootstrap'
         ])
-        .controller('RootController', ['$scope', '$rootScope', '$window', '$timeout',
-            function ($scope, $rootScope, $window, $timeout) {
+        .controller('RootController', ['$scope', '$rootScope',
+            function ($scope, $rootScope) {
                 // used by all views
-                $rootScope.siteTitle = 'Keyboard Kit';
-                $rootScope.viewChanged = false;
+                $scope.siteTitle = 'Keyboard Kit';
+                $scope.viewChanged = false;
 
-                $scope.handleOrientation = function (win) {
-                    if (window.orientation === 0)
-                    {
-                        return 'portrait';
-                    }
-                    else
-                    {
+                $scope.setOrientation = function () {
+                    if (screen.orientation.type === "landscape-primary") {
                         return 'landscape';
+                    }
+                    else if (screen.orientation.type === "portrait-primary") {
+                        return 'portrait';
                     }
                 };
 
-                angular.element($window).on('orientationchange', function (event, args) {
-                    $scope.orientation = $scope.handleOrientation($window);
-                });
-
-                angular.element($window).on('load', function (event, args) {
-                    $scope.orientation = $scope.handleOrientation($window);
+                $(window).on("load resize orientationchange", function (event) {
+                    $scope.orientation = $scope.setOrientation();
+                    $scope.$apply();
                 });
 
             }])
