@@ -94,18 +94,18 @@ angular.module('KeyboardKit.Main',
                         el.remove();
                     });
                 };
-                
-                $scope.keepScoreChanged = function() {
+
+                $scope.keepScoreChanged = function () {
                     $cookies.put('usingKeepScore', $scope.keepScore.toString());
                 };
-                
-                  //Break on Middle C checkbox
-                $scope.breakOnMiddleCChanged = function() {
+
+                //Break on Middle C checkbox
+                $scope.breakOnMiddleCChanged = function () {
                     $cookies.put('usingBreakOnMiddleC', $scope.breakOnMiddleC.toString());
                 };
 
                 //Show Line Names Checkbox
-                $scope.showLineNamesChanged = function() {
+                $scope.showLineNamesChanged = function () {
                     $cookies.put('usingShowLineNames', $scope.showLineNames.toString());
                 };
 
@@ -368,8 +368,15 @@ angular.module('KeyboardKit.Main',
 
                         $scope.midiAvailable = 'MIDI DEVICE DETECTED';
                         $scope.midiColor = 'deepskyblue';
-                        input.onmidimessage = $scope.midiMessageHandler; // onmidimessage( event ), event.data & event.receivedTime are populated
-                        input.onstatechange = $scope.midiStateChangedHandler;
+
+                        for (var input of midi.inputs.values())
+                        {
+                            input.onmidimessage = $scope.midiMessageHandler;
+                            input.onstatechange = $scope.midiStateChangedHandler;
+                        }
+
+                        ///input.onmidimessage = $scope.midiMessageHandler; // onmidimessage( event ), event.data & event.receivedTime are populated
+                        //input.onstatechange = $scope.midiStateChangedHandler;
                         $scope.$apply();
                     }
                     else {
@@ -458,33 +465,33 @@ angular.module('KeyboardKit.Main',
                     let usingKeySearch = $cookies.get('usingKeySearch');
                     // default status or user's last
                     $scope.useKeySearch = usingKeySearch === 'true' ? true : false;
-                    
+
                     // $scope.keepScoreChanged
                     // is key search checkbox active
                     let usingKeepScore = $cookies.get('usingKeepScore');
                     // default status or user's last
                     $scope.keepScore = usingKeepScore === 'true' ? true : false;
-                    
+
                     let usingBreakOnMiddleC = $cookies.get('usingBreakOnMiddleC');
                     $scope.breakOnMiddleC = usingBreakOnMiddleC === 'true' ? true : false;
 
                     let usingShowLineNames = $cookies.get('usingShowLineNames');
                     $scope.showLineNames = usingShowLineNames === 'true' ? true : false;
-                    
+
                     // now that we know the prefs are set
                     $scope.makeMidiConnection();
 
                     // startup watchers
                     // watches for user clicking "Key Search" checkbox
                     $scope.$watch('useKeySearch', $scope.keySearchChanged);
-                    
+
                     // watches for selectedKey changes
                     $scope.$watch('selectedKey', $scope.keyChangeReset);
-                    
+
                     // watches for user clicking "Keep Score" checkbox
                     $scope.$watch('keepScore', $scope.keepScoreChanged);
-                    
-                     // watches for user clicking "Break on Middle C" checkbox
+
+                    // watches for user clicking "Break on Middle C" checkbox
                     $scope.$watch('breakOnMiddleC', $scope.breakOnMiddleCChanged);
 
                     // watches for user clicking "Show Line Names" checkbox
