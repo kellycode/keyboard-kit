@@ -39,6 +39,14 @@ body {
     flex: 0 1 25px;
 }
 
+#keybaordKit .data_options_mod {
+    flex: 0 1 25px;
+}
+
+#keybaordKit .data_options_mod .form-check-inline {
+    justify-content: center;
+}
+
 #keybaordKit .data_staff_mod {
     flex: 1 1 auto;
 }
