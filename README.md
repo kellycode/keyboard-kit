@@ -2,7 +2,7 @@
 
 Uses a midi piano connection over a web page interface to use keyboard tools.
 
-![a busy keyboard toolkit](https://kellycode.github.io/keyboard-kit/site_preview.png)
+![a busy keyboard toolkit](https://kellycode.github.io/keyboard-kit/site_preview.jpg)
 
 The gulpfile is used to minify and obfuscate to a deploy version
 
