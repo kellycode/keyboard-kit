@@ -4,8 +4,6 @@ Uses a midi piano connection over a web page interface to use keyboard tools.
 
 ![a busy keyboard toolkit](https://kellycode.github.io/keyboard-kit/site_preview.jpg)
 
-The gulpfile is used to minify and obfuscate to a deploy version
-
 Keyboard Kit
 Keyboard Kit is designed to be an educational tool for use with a piano connected to a desktop PC. It makes no musical tones.
 
@@ -33,5 +31,7 @@ Show Line Names
 When Show Line Names" is actived, it simply identifies the staff line names.
 
 By the time I made this I already knew what it taught so never used actually used it but have ideas to make it useful.
+
+The gulpfile is used to minify and obfuscate to a deploy version, otherwise it's all just Angular, Vanilla JS and CSS
 
 An AngularJS(1) App
