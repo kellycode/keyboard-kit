@@ -1,5 +1,7 @@
 # keyboard-kit
 
+I tend to build apps to understand new concepts.  It certainly did that and looks cool but really has no use.
+
 Uses a midi keyboard connection.
 
 ![a busy keyboard toolkit](https://kellycode.github.io/keyboard-kit/site_preview.jpg)
@@ -11,12 +13,11 @@ Sight Reading Practice:
 When "Keep Score" activated, random notes will appear on the staff and a score is updated for correct notes selected on your piano.  There are far more simple phone apps to learn the notes so this will be removed. (A silly idea, just use an app)
 
 Common Chord Finder:
-When "Key Search" is activated, pressing five or more keys on your piano will identify keys those notes belong to. Nice for finding keys while listening.
-My favorite bit. (My favorite bit)
+When "Key Search" is activated, pressing five or more keys on your piano will identify keys those notes belong to. Nice for finding keys while listening. (My favorite bit and a little useful)
 
 Common Chords For Keys:
-Selecting a Key using the button above the piano will identify the most common fourteen chords for that key.
-My #2 favorite bit. (After playing a while, you just know what those are)
+Selecting a Key using the button above the piano will identify the most common fourteen chords for that key and the scale.
+My #2 favorite bit. (Another silly idea: After playing a while, you just know what those are or use an app)
 
 Break On Middle C:
 The staff will show which notes you're currently playing including the area where bass and treble keys overlap. "Break on Middle C" will split those.
