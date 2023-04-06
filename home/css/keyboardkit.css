@@ -4,6 +4,7 @@
 
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -15,66 +16,22 @@ body {
     min-height: fit-content;
     font-size: 16px;
     background-color: #000;
-    padding: 20px 20px 20px 20px;
 }
 
 #keybaordKit {
     position: relative;
-    border: 1px solid #bbbbbb;
-    border-radius: 6px;
     height: 100%;
-    padding: 20px;
-    display: flex;
-    flex-flow: column;
-}
-
-#keybaordKit #staffScore {
-    padding: 0px 20px 20px 20px;
-    flex-grow: 2;
-    display: flex;
-    flex-flow: column;
-}
-
-#keybaordKit .data_score_mod {
-    flex: 0 1 25px;
-}
-
-#keybaordKit .data_options_mod {
-    flex: 0 1 25px;
-}
-
-#keybaordKit .data_options_mod .form-check-inline {
-    justify-content: center;
-}
-
-#keybaordKit .data_staff_mod {
-    flex: 1 1 auto;
-}
-
-#keybaordKit #header_module {
-    flex: 0 1 60px;
+    width: 100%;
 }
 
 #keybaordKit .sr_center {
-    flex: 1 1 auto;
-    display: flex;
-}
-
-body.portrait #keybaordKit .sr_center {
-    flex-flow: column;
-}
-
-body.landscape #keybaordKit .sr_center {
-    flex-flow: row;
+    height: 80%;
+    margin: 0px;
 }
 
 #keybaordKit #chordsMod {
-    padding: 20px;
-    flex-grow: 6;
-}
-
-#keybaordKit .piano-mod {
-    flex: 0 1 300px;
+    padding: 10px;
+    width: 100%;
 }
 
 #keybaordKit .srVersion {

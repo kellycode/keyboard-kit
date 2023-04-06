@@ -12,6 +12,10 @@
     background-color: #ffff00;
 }
 
+.chords_module .key_col.row_head {
+    flex: 0 0 100px;
+}
+
 .chords_module .key_col {
     height: 100%;
     padding: 0px;
@@ -52,7 +56,7 @@ cerise      #DE3163
 
 /* C */
 #c_major .k1_c, #c_major .k1_e , #c_major .k1_g  {
-    background-color: #f7d842;
+    background-color: #2ca8c2;
 }
 #c_minor .k1_c, #c_minor .k1_de, #c_minor .k1_g  {
     background-color: #f15f74;

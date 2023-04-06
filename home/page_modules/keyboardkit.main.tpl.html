@@ -1,36 +1,7 @@
 
 <div id="keybaordKit" class="" ng-controller="KeyboardKitController">
-
-    <div data-header-module></div>
-
     <div class="sr_center row">
-        <div id="staffScore" class="">
-            <div class="data_score_mod" data-score-module></div>
-            <div class="data_staff_mod" data-staff-module></div>
-            <div class="data_options_mod row">
-                <div class="form-check form-check-inline col">
-                    <input type="checkbox" class="form-check-input" ng-model="keepScore" id="keepScoreCheckbox">
-                    <label class="form-check-label" for="keepScoreCheckbox">Keep Score</label>
-                </div>
-                <div class="form-check form-check-inline col">
-                    <input type="checkbox" class="form-check-input" ng-model="breakOnMiddleC" id="breakOnMiddleCCheckbox">
-                    <label class="form-check-label" for="breakOnMiddleCCheckbox">Break on Middle C</label>
-                </div>
-                <div class="form-check form-check-inline col">
-                    <input type="checkbox" class="form-check-input" ng-model="showLineNames" id="showLineNamesCheckbox">
-                    <label class="form-check-label" for="showLineNamesCheckbox">Show Line Names</label>
-                </div>
-                <div class="form-check form-check-inline col">
-                    <input type="checkbox" class="form-check-input" ng-model="useKeySearch" id="keySearchCheckbox">
-                    <label class="form-check-label" for="keySearchCheckbox">Key Search</label>
-                </div>
-            </div>
-        </div>
         <div id="chordsMod" class="" data-chords-module></div>
     </div>
-
-    <div class="piano-mod row" data-piano-module data-handle-note-selection="handleClickedKeySelection()"></div>
-
-    <span data-app-version></span>
-
+    <div class="piano-mod" data-piano-module data-handle-note-selection="handleClickedKeySelection()"></div>
 </div>
